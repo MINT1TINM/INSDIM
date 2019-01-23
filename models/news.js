@@ -1,18 +1,14 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-// schema
-const workSchema = new Schema({
+const newsSchema = new Schema({
   title: String,
-  year: Date,
-  client: String,
-  description: String,
-  videoLink: String,
-  visibility: Boolean,
   createTime: {
     type: String,
     default: Date.now()
   },
+  author: String,
+  content: String,
   pic: [
     {
       title: String,
@@ -26,4 +22,4 @@ const workSchema = new Schema({
   ]
 });
 
-module.exports = mongoose.model('Work', workSchema);
+module.exports = mongoose.model("News", newsSchema);

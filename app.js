@@ -11,9 +11,12 @@ var app = express();
 
 // mongoose
 const mongoose = require("mongoose");
-const user = "mint";
-const pwd = "INSCHINAisdead1";
-const url = `mongodb://${user}:${pwd}@39.96.61.110/INSLENS`;
+
+const configDev = [];
+configDev.usr = "mint";
+configDev.pwd = "INSCHINAisdead1";
+const url = `mongodb://${configDev.usr}:${configDev.pwd}@39.96.61.110/INSLENS`;
+
 mongoose.connect(
   url,
   { useNewUrlParser: true }
