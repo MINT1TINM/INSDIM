@@ -1,0 +1,48 @@
+.slider {
+  position: relative;
+  user-select: none;
+  overflow: hidden
+}
+
+.slider-item {
+  display: none;
+}
+
+.slider-pic {
+  width: 100%;
+}
+
+.slider-trans {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-color: #fff;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  margin-top: -22px;
+  color: #111;
+  padding: 20px;
+  background-color: white;
+  user-select: none;
+}
+
+.prev:hover, .next:hover {
+  text-decoration: none;
+  background-color: rgb(240, 240, 240)
+}
+
+.next {
+  right: 0
+}
+
+.fade {
+  transition: all 0.5s cubic-bezier(0.000, 0.000, 0.580, 1.000);
+  -moz-transition: all 0.5s cubic-bezier(0.000, 0.000, 0.580, 1.000);
+  -webkit-transition: all 0.5s cubic-bezier(0.000, 0.000, 0.580, 1.000);
+}

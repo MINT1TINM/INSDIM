@@ -1,7 +1,11 @@
 extends layout
 
 block content
-  h1 home
-  ul
+  section
     each item in newsList
-      li= item._id
+      div(class="news-item")
+        div(class="news-title")= item.title
+        div(class="news-pic")
+          img(src="https://www.inslens.com//media/News/7/693469b1114743b896ddcc252f045ef2.jpg")
+        p= item.title
+      hr

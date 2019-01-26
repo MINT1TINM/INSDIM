@@ -12,10 +12,10 @@ router.get("/", (req, res) => {
   });
 });
 
-router.get("/work", (req, res) => {
+router.get("/collection", (req, res) => {
   work.find((err, workList) => {
     if (err) return res.status(500).send(err);
-    return res.render("work", { workList: workList });
+    return res.render("collection", { workList: workList });
   });
 });
 
@@ -31,10 +31,10 @@ router.get("/work", (req, res) => {
 //   res.render("work");
 // });
 
-router.get("/work/:id", (req, res) => {
+router.get("/collection/:id", (req, res) => {
   work.findById(req.params.id, (err, workDetail) => {
     if (err) return res.status(500).send(err);
-    return res.render("workDetail", { workDetail: workDetail });
+    return res.render("collectionDetail", { workDetail: workDetail });
   });
 });
 

@@ -1,4 +1,41 @@
 extends layout
 
 block content
-  h1 contact
+  section
+    h1 contact
+    div(id="amap" class="map")
+    h3 address
+    h4 ROOM 201, BLOCK 12, NO. 51, LANE 1895, HUTAI ROAD, JINGAN DISTRICT, SHANGHAI, CHINA
+    hr
+    h3 service
+    h4 mint@inslens.com
+    hr
+    h3 join us 
+    h4 hr@inslens.com
+
+  script(src="https://webapi.amap.com/maps?v=1.4.12&key=3c1d39d0b39894e0e3d96e369f24f497")
+  script.
+
+      var map = new AMap.Map('amap', {
+          resizeEnable: true,
+          zoom: 21,
+          center: [121.421187, 31.292114],
+          mapStyle: "amap://styles/dark",
+          lang: 'en'
+      });
+      var circleMarker = new AMap.CircleMarker({
+          center: [121.421187, 31.292114],
+          radius: 10,
+          strokeColor: 'black',
+          strokeWeight: 2,
+          strokeOpacity: 0.5,
+          fillColor: 'rgba(12,12,12,1)',
+          fillOpacity: 0.5,
+          zIndex: 10,
+          bubble: true,
+          cursor: 'pointer',
+          clickable: true
+      })
+      circleMarker.setMap(map)
+
+    

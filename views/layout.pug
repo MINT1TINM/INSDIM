@@ -1,6 +1,46 @@
 doctype html
 html
   head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui")
     title INSLENS | A DESIGN COMPANY
+    link(rel="shortcut icon",href="/img/favicon.jpg") 
+    link(rel="icon",href="/img/favicon.jpg",type="image/x-icon") 
+    link(rel='stylesheet', href='/css/style.min.css')
+    link(rel='stylesheet', href='/css/grid.min.css')
+    script(src="/js/public.min.js")
+
+
+
   body
-    block content
+    div(id="loader" class="loader")
+      div(class="spinner" id="spinner")
+        div(class="double-bounce1")
+        div(class="double-bounce2")
+    div(class="sidebar")
+      div(class="logo")
+        img(src="/img/inslens4.png" width="119" height="119" alt="")
+      div(class="sidebar-links")
+        a(href="/") news
+        a(href="/collection") collection
+        a(href="/about") about
+        a(href="/contact") contact
+    div(class="main")
+      div(class="header")
+        div(class="container-fluid")
+          h2 INSLENS
+      div(class="container-fluid")
+        block content
+      footer
+        div(class="container-fluid")
+          - var thisYear = new Date().getFullYear()
+          h3 INSLENS #{thisYear}
+          h4 think by inspiration
+          h5 沪ICP备16025975号-1
+
+  script(src="/js/loading.min.js")
+
+
+
+
+
