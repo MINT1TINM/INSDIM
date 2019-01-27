@@ -3,9 +3,12 @@ var express = require("express");
 var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
+var bodyParser = require("body-parser");
 
 var indexRouter = require("./routes/index");
-// var usersRouter = require("./routes/users");
+var workRouter = require("./routes/work");
+// var partnerRouter = require("./routes/partner");
+// var subsidiaryRouter = require("./routes/subsidiary");
 
 var app = express();
 
@@ -19,7 +22,7 @@ const url = `mongodb://${configDev.usr}:${configDev.pwd}@39.96.61.110/INSLENS`;
 
 mongoose.connect(
   url,
-  { useNewUrlParser: true }
+  { useNewUrlParser: true, useFindAndModify: false }
 );
 const db = mongoose.connection;
 db.on("open", () => {
@@ -40,12 +43,16 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/", indexRouter);
-// app.use("/users", usersRouter);
+app.use("/work", workRouter);
+// app.use("/subsidiary", subsidiaryRouter);
+// app.use("/partner", partnerRouter);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
   next(createError(404));
 });
+
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // error handler
 app.use((err, req, res, next) => {

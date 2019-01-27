@@ -14,7 +14,7 @@ router.get("/", (req, res) => {
 
 router.get("/collection/:year", (req, res) => {
   work.find(
-    { year: req.params.year },
+    { year: req.params.year, visibility: true },
     "title client titlePic",
     (err, workList) => {
       if (err) return res.status(500).send(err);
@@ -29,7 +29,7 @@ router.get("/collection/:year", (req, res) => {
 router.get("/collection/older", (req, res) => {
   const startYear = new Date().getFullYear() - 3;
   work.find(
-    { year: { $lt: startYear } },
+    { year: { $lt: startYear }, visibility: true },
     "title client titlePic year",
     (err, workList) => {
       if (err) return res.status(500).send(err);
@@ -40,19 +40,7 @@ router.get("/collection/older", (req, res) => {
   );
 });
 
-router.get("/add", (req, res) => {
-  const newWork = new work({
-    title: "test"
-  });
-  newWork.save((err, data) => {
-    if (err) {
-      return console.log(err);
-    }
-  });
-  res.render("about");
-});
-
-router.get("/collection/:id", (req, res) => {
+router.get("/collection/detail/:id", (req, res) => {
   work.findById(req.params.id, (err, workDetail) => {
     if (err) return res.status(500).send(err);
     return res.render("collectionDetail", { workDetail: workDetail });
