@@ -4,26 +4,26 @@ const Schema = mongoose.Schema;
 // schema
 const workSchema = new Schema({
   title: String,
-  year: Date,
+  year: String,
   client: String,
   description: String,
   videoLink: String,
   visibility: Boolean,
   createTime: {
-    type: String,
+    type: Date,
     default: Date.now()
   },
+  titlePic: String,
   pic: [
     {
       title: String,
       url: String,
       createTime: {
-        type: String,
+        type: Date,
         default: Date.now()
-      },
-      type: String
+      }
     }
   ]
 });
 
-module.exports = mongoose.model('Work', workSchema);
+module.exports = mongoose.model("Work", workSchema);

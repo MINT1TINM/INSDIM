@@ -12,24 +12,45 @@ router.get("/", (req, res) => {
   });
 });
 
-router.get("/collection", (req, res) => {
-  work.find((err, workList) => {
-    if (err) return res.status(500).send(err);
-    return res.render("collection", { workList: workList });
-  });
+router.get("/collection/:year", (req, res) => {
+  work.find(
+    { year: req.params.year },
+    "title client titlePic",
+    (err, workList) => {
+      if (err) return res.status(500).send(err);
+      return res.render("collection", {
+        workList: workList,
+        year: req.params.year
+      });
+    }
+  );
 });
 
-// router.get("/add", (req, res) => {
-//   const newWork = new news({
-//     title: "test",
-//   });
-//   newWork.save((err, data) => {
-//     if (err) {
-//       return console.log(err);
-//     }
-//   });
-//   res.render("work");
-// });
+router.get("/collection/older", (req, res) => {
+  const startYear = new Date().getFullYear() - 3;
+  work.find(
+    { year: { $lt: startYear } },
+    "title client titlePic year",
+    (err, workList) => {
+      if (err) return res.status(500).send(err);
+      return res.render("collection", {
+        workList: workList
+      });
+    }
+  );
+});
+
+router.get("/add", (req, res) => {
+  const newWork = new work({
+    title: "test"
+  });
+  newWork.save((err, data) => {
+    if (err) {
+      return console.log(err);
+    }
+  });
+  res.render("about");
+});
 
 router.get("/collection/:id", (req, res) => {
   work.findById(req.params.id, (err, workDetail) => {

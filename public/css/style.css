@@ -1,4 +1,5 @@
 @import url('https://fonts.loli.net/css?family=Dosis|Open+Sans');
+@import url('https://at.alicdn.com/t/font_1033024_gaq2cnbyr2r.css');
 /* main */
 
 body {
@@ -12,6 +13,11 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+.menu {
+  font-size: 30px;
+  cursor: pointer;
+}
+
 a {
   color: #111;
   text-decoration: none
@@ -19,7 +25,7 @@ a {
 
 a:hover {
   color: rgb(43, 43, 43);
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 ::selection {
@@ -98,16 +104,16 @@ span {
   background-color: #fff;
   z-index: 1000;
   pointer-events: none;
-  transition: background-color 0.5s cubic-bezier(0.000, 0.000, 0.580, 1.000);
-  -moz-transition: background-color 0.5s cubic-bezier(0.000, 0.000, 0.580, 1.000);
-  -webkit-transition: background-color 0.5s cubic-bezier(0.000, 0.000, 0.580, 1.000);
+  transition: opacity 0.5s cubic-bezier(0.000, 0.000, 0.580, 1.000);
+  -moz-transition: opacity 0.5s cubic-bezier(0.000, 0.000, 0.580, 1.000);
+  -webkit-transition: opacity 0.5s cubic-bezier(0.000, 0.000, 0.580, 1.000);
 }
 
 .spinner {
   width: 40px;
   height: 40px;
   position: relative;
-  top: 50%;
+  top: 45%;
   left: 50%
 }
 
@@ -158,21 +164,23 @@ span {
   left: 0;
   background-color: rgb(15, 15, 15);
   overflow-x: hidden;
-  padding: 20px 0
+  padding: 20px 0;
+  transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  -moz-transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  -webkit-transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-.header {
-  visibility: hidden
+.sidebar-toggle {
+  display: none !important
 }
 
 .sidebar-links {
-  padding-top: 20px
+  padding-top: 20px;
+  user-select: none;
 }
 
 .sidebar a {
-  padding: 10px;
   text-decoration: none;
-  font-size: 14px;
   font-weight: 400;
   color: #999;
   display: block;
@@ -191,6 +199,29 @@ span {
   transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
   -moz-transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
   -webkit-transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
+}
+
+.sidebar-standard-links {
+  padding: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.sidebar-fold-group {
+  list-style-type: none;
+  padding-inline-start: 0;
+  margin: 0;
+  opacity: 0;
+  height: 0;
+  pointer-events: none;
+  transition: opacity 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  -moz-transition: opacity 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  -webkit-transition: opacity 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.sidebar-fold-links {
+  font-size: 12px;
+  padding: 5px
 }
 
 .logo {
@@ -271,7 +302,8 @@ img {
     grid-template-columns: repeat(2, 1fr);
   }
   .sidebar {
-    visibility: hidden
+    width: 0%;
+    opacity: 0
   }
   .main {
     margin-left: 0;
@@ -280,7 +312,7 @@ img {
   .container-fluid {
     padding: 0 5%
   }
-  .header {
-    visibility: visible
+  .sidebar-toggle {
+    display: block !important
   }
 }
