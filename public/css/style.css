@@ -1,5 +1,5 @@
 @import url('https://fonts.loli.net/css?family=Dosis|Open+Sans');
-@import url('https://at.alicdn.com/t/font_1033024_gaq2cnbyr2r.css');
+@import url('https://at.alicdn.com/t/font_1033024_u4qw8uidx7r.css');
 /* main */
 
 body {
@@ -11,6 +11,11 @@ body {
   height: 100%;
   margin: 0;
   -webkit-font-smoothing: antialiased;
+  -moz-user-select: none;
+  -o-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
   user-select: none;
 }
 
@@ -79,7 +84,7 @@ h5 {
 }
 
 p {
-  color: #777;
+  color: rgb(68, 68, 68);
   font-family: 'Open Sans'
 }
 
@@ -93,7 +98,7 @@ p {
 
 span {
   letter-spacing: 0.2em;
-  color: rgb(192, 192, 192)
+  color: rgb(48, 48, 48)
 }
 
 ul {
@@ -302,10 +307,17 @@ img {
   margin: 40px 0 70px 0
 }
 
+/* gallery */
+
+.gallery-item {
+  margin: 20px 0
+}
+
+.gallery-pic {
+  width: 100%
+}
+
 @media(max-width: 62em) {
-  .grid-wrapper {
-    grid-template-columns: repeat(2, 1fr);
-  }
   .sidebar {
     width: 0%;
     opacity: 0
@@ -319,5 +331,8 @@ img {
   }
   .sidebar-toggle {
     display: block !important
+  }
+  .spinner {
+    left: 45%
   }
 }

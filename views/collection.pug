@@ -3,7 +3,7 @@ extends layout
 block content
   section
     h1 collection - #{year}
-    div(class="grid-wrapper")    
+    div(class="grid-wrapper mt-50")    
       each item in workList  
         div(class="grid-item")
           a(href="/collection/detail/"+item._id)
@@ -11,6 +11,10 @@ block content
               div(class="grid-thumbnail")
                 img(src=item.titlePic)
               div(class="grid-title") 
+                h3= item.title
+                span= item.client
+          a(href="/collection/detail/"+item._id)
+            div(class="grid-title-mob")
                 h3= item.title
                 span= item.client
 

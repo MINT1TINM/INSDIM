@@ -1,26 +1,19 @@
 extends layout
 
 block content
-  link(rel='stylesheet', href='/css/slider.min.css')
   section
-    a(href="/collection/"+workDetail.year) &#10094; &nbsp; back to collection
+    a(href="/collection/"+workDetail.year) 
+      i(class="iconfont icon-iconarrowl") 
+      span back to collection
     h1= workDetail.title
-    h4(class="mb-50") INSDIM
+    h4(class="mb-50")= workDetail.client
 
-    div(class="slider")
-      div(class="slider-trans fade")
-      div(class="slider-item")
-        img(class="slider-pic" src="https://www.inslens.com//media/Work/36/61f67bdd791d4310a35242882fdfc4d4.jpg")
-      div(class="slider-item")
-        img(class="slider-pic" src="https://www.inslens.com//media/Work/35/6e4177a0bb6b4bdbab750cbaa759528f.jpg")
-      div(class="slider-item")
-        img(class="slider-pic"  src="https://www.inslens.com//media/Work/35/6e18607817984e87856f6383ab4f5201.jpg")
+    div(class="description mt-50 mb-50")
+      p!= workDetail.description
 
-      a(class="prev fade slider-toggle" onclick="plusSlide(-1)") &#10094;
-      a(class="next fade slider-toggle" onclick="plusSlide(1)") &#10095;
+    each item in workDetail.pic
+      div(class="gallery-item")
+        img(class="gallery-pic" src=item.url)
 
-    div(class="description mt-50")
-      p= workDetail.description
 
-  script(src="/js/slider.min.js" )
 
