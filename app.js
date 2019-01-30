@@ -19,9 +19,10 @@ const configDev = [];
 configDev.usr = "mint";
 configDev.pwd = "INSCHINAisdead1";
 const url = `mongodb://${configDev.usr}:${configDev.pwd}@39.96.61.110/INSLENS`;
+const urlBase = 'mongodb://127.0.0.1/INSLENS'
 
 mongoose.connect(
-  url,
+  urlBase,
   { useNewUrlParser: true, useFindAndModify: false }
 );
 const db = mongoose.connection;

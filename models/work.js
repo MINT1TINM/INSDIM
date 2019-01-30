@@ -8,7 +8,7 @@ const workSchema = new Schema({
   client: String,
   description: String,
   videoLink: String,
-  visibility: Boolean,
+  visibility: String,
   createTime: {
     type: Date,
     default: Date.now()

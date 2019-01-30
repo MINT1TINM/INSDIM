@@ -14,10 +14,11 @@ router.get("/", (req, res) => {
 
 router.get("/collection/:year", (req, res) => {
   work.find(
-    { year: req.params.year, visibility: true },
+    { year: req.params.year, visibility: '1' },
     "title client titlePic",
     (err, workList) => {
       if (err) return res.status(500).send(err);
+      console.log(workList);
       return res.render("collection", {
         workList: workList,
         year: req.params.year
