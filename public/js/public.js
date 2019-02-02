@@ -49,11 +49,26 @@ function toggleFolder() {
 
 const getMainRoute = (() => {
   var currentRoute = window.location.pathname.split("/")[1];
+  var subLinks = document.getElementById("collection-sub");
   if (currentRoute) {
     var currentA = document.getElementById(currentRoute);
   } else {
     var currentA = document.getElementById("news");
   }
+  if (currentRoute == "collection") {
+    subLinks.style.display = "block";
+  } else {
+    subLinks.style.display = "none";
+  }
   currentA.style.backgroundColor = "rgb(20,20,20)";
   currentA.style.color = "#fff";
+})();
+
+const getSubRoute = (() => {
+  var currentSubRoute = window.location.pathname.split("/")[2];
+  if (currentSubRoute) {
+    var subLinks = document.getElementById(currentSubRoute);
+    subLinks.style.backgroundColor = "rgb(20,20,20)";
+    subLinks.style.color = "#fff";
+  }
 })();

@@ -85,7 +85,7 @@ h5 {
 
 p {
   color: rgb(68, 68, 68);
-  font-family: 'Open Sans'
+  letter-spacing: 0.1em;
 }
 
 .mb-50 {
@@ -97,7 +97,7 @@ p {
 }
 
 span {
-  letter-spacing: 0.2em;
+  letter-spacing: 0.1em;
   color: rgb(48, 48, 48)
 }
 
@@ -172,7 +172,7 @@ ul {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: rgb(255, 255, 255);
+  /* background-color: rgb(255, 255, 255); */
   overflow-x: hidden;
   padding: 20px 0;
   transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -200,7 +200,7 @@ ul {
   margin-left: 40px;
   width: 100px;
   /* font-family: 'Open Sans'; */
-  background-color: #fff;
+  /* background-color: #fff; */
   transition: background-color 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
   -moz-transition: background-color 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
   -webkit-transition: background-color 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
@@ -232,6 +232,16 @@ ul {
   -webkit-transition: opacity 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
+.sidebar-sub {
+  margin-left: 140px;
+  margin-top: -46px
+}
+
+.sidebar-sub-links {
+  padding: 5px;
+  width: 50px !important
+}
+
 .sidebar-fold-links {
   font-size: 12px;
   padding: 5px
@@ -245,7 +255,7 @@ ul {
 
 .main {
   margin-left: 270px;
-  padding: 20px 5%
+  padding: 20px 0
 }
 
 section {
@@ -318,7 +328,6 @@ img {
 
 .gallery-pic {
   width: 100%;
-  min-height: 300px
 }
 
 @media(max-width: 62em) {
@@ -334,9 +343,14 @@ img {
     padding: 0 5%
   }
   .sidebar-toggle {
-    display: block !important
+    display: block !important;
   }
   .spinner {
     left: 45%
+  }
+  .toggle-close {
+    width: 37px !important;
+    padding-left: 10px;
+    padding-right: 5px
   }
 }

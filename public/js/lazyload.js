@@ -1,25 +1,48 @@
 const isElementInViewport = el => {
   var rect = el.getBoundingClientRect();
   return (
-    rect.top >= 0 &&
-    rect.left >= 0 &&
+    rect.top >= -1 &&
     rect.bottom <=
-      (window.innerHeight ||
-        document.documentElement.clientHeight) /*or $(window).height() */ &&
-    rect.right <=
-      (window.innerWidth ||
-        document.documentElement.clientWidth) /*or $(window).width() */
+      (window.innerHeight + 200 ||
+        document.documentElement.clientHeight + 200) /*or $(window).height() */
   );
 };
 
-function preLoad(url) {
-  var img = new Image();
-  img.src;
-}
+const showPic = pic => {
+  pic.src = pic.getAttribute("data-src");
+};
 
-var gallery = document.getElementsByTagName("img");
-for (let index = 0; index < gallery.length; index++) {
-  if (isElementInViewport(gallery[index])) {
-    console.log(index);
+const lazyLoad = gallery => {
+  for (let index = 0; index < gallery.length; index++) {
+    if (isElementInViewport(gallery[index])) {
+      showPic(gallery[index]);
+    }
   }
-}
+};
+
+const throttle = (fn, delay, atleast) => {
+  var timer = null;
+  var previous = null;
+  return function() {
+    var now = +new Date();
+    if (!previous) previous = now;
+    if (now - previous > atleast) {
+      fn();
+      // 重置上一次开始时间为本次结束时间
+      previous = now;
+    } else {
+      clearTimeout(timer);
+      timer = setTimeout(function() {
+        fn();
+      }, delay);
+    }
+  };
+};
+
+var gallery = document.getElementsByClassName("gallery-pic");
+
+window.onload = lazyLoad(gallery);
+
+window.onscroll = throttle(function() {
+  lazyLoad(gallery);
+}, 100);

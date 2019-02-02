@@ -4,6 +4,12 @@ var router = express.Router();
 const work = require("../models/work");
 const news = require("../models/news");
 
+const yearList = [];
+const thisYear = parseInt(new Date().getFullYear());
+for (let index = thisYear; index >= 2014; index--) {
+  yearList.push(index);
+}
+
 /* GET home page. */
 router.get("/", (req, res) => {
   news.find((err, newsList) => {
@@ -14,24 +20,27 @@ router.get("/", (req, res) => {
 
 router.get("/collection/:year", (req, res) => {
   work.find(
-    { year: req.params.year, visibility: '1' },
+    { year: req.params.year, visibility: "1" },
     "title client titlePic",
     (err, workList) => {
       if (err) return res.status(500).send(err);
-      console.log(workList);
+      // console.log(workList);
       return res.render("collection", {
         workList: workList,
-        year: req.params.year
+        year: req.params.year,
+        yearList: yearList
       });
     }
   );
 });
 
-
-router.get("/collection/detail/:id", (req, res) => {
+router.get("/collection/:year/:id", (req, res) => {
   work.findById(req.params.id, (err, workDetail) => {
     if (err) return res.status(500).send(err);
-    return res.render("collectionDetail", { workDetail: workDetail });
+    return res.render("collectionDetail", {
+      workDetail: workDetail,
+      yearList: yearList
+    });
   });
 });
 
