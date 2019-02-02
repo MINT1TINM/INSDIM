@@ -8,15 +8,10 @@ html
     link(rel="icon",href="/img/favicon.jpg",type="image/x-icon") 
     link(rel='stylesheet', href='/css/style.min.css')
     link(rel='stylesheet', href='/css/grid.min.css')
-    script(src="/js/public.min.js")
 
 
 
   body
-    - var thisYear = new Date().getFullYear()
-    - var lastYear = new Date().getFullYear() -1 
-    - var last2Year = new Date().getFullYear() -2
-
     div(id="loader" class="loader")
       div(class="spinner" id="spinner")
         div(class="double-bounce1")
@@ -26,22 +21,12 @@ html
         i(class="menu iconfont icon-close")
 
       div(class="logo")
-        img(src="/img/inslens4.png" width="119" height="119" alt="")
+        img(src="/img/favicon.jpg" width="120" height="120" alt="")
       div(class="sidebar-links")
-        a(class="sidebar-standard-links" href="/") news
-        a(class="sidebar-standard-links" id="folder" onclick="toggleFolder()") collection 
-          i(class="iconfont icon-arrow_d" id="sidebar-fold-toggle")
-        ul(class="sidebar-fold-group")
-          li 
-            a(class="sidebar-fold-links" href='/collection/'+thisYear) #{thisYear}
-          li 
-            a(class="sidebar-fold-links" href='/collection/'+lastYear) #{lastYear}
-          li 
-            a(class="sidebar-fold-links" href='/collection/'+last2Year) #{last2Year}
-          li 
-            a(class="sidebar-fold-links" href='/collection/older') older
-        a(class="sidebar-standard-links" href="/about") about
-        a(class="sidebar-standard-links" href="/contact") contact
+        a(class="sidebar-standard-links" id="news" href="/") news
+        a(class="sidebar-standard-links" id="collection" href="/collection/2019") collection 
+        a(class="sidebar-standard-links" id="about" href="/about") about
+        a(class="sidebar-standard-links" id="contact" href="/contact") contact
     div(class="main")
       div(class="sidebar-toggle")
         div(class="container-fluid")
@@ -56,6 +41,10 @@ html
           h5 沪ICP备16025975号-1
 
   script(src="/js/loading.min.js")
+  script(src="/js/public.min.js")
+
+
+
 
 
 

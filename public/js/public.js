@@ -46,3 +46,14 @@ function toggleFolder() {
     toggle.setAttribute("class", "iconfont icon-arrow_u");
   }
 }
+
+const getMainRoute = (() => {
+  var currentRoute = window.location.pathname.split("/")[1];
+  if (currentRoute) {
+    var currentA = document.getElementById(currentRoute);
+  } else {
+    var currentA = document.getElementById("news");
+  }
+  currentA.style.backgroundColor = "rgb(20,20,20)";
+  currentA.style.color = "#fff";
+})();

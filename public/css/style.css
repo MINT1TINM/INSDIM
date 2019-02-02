@@ -172,7 +172,7 @@ ul {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: rgb(15, 15, 15);
+  background-color: rgb(255, 255, 255);
   overflow-x: hidden;
   padding: 20px 0;
   transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -192,20 +192,23 @@ ul {
 .sidebar a {
   text-decoration: none;
   font-weight: 400;
-  color: #999;
+  color: rgb(56, 56, 56);
   display: block;
-  text-align: center;
+  text-align: left;
   line-height: 1.9;
   letter-spacing: 2px;
-  font-family: 'Open Sans';
-  background-color: transparent;
+  margin-left: 40px;
+  width: 100px;
+  /* font-family: 'Open Sans'; */
+  background-color: #fff;
   transition: background-color 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
   -moz-transition: background-color 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
   -webkit-transition: background-color 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
 }
 
 .sidebar a:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgb(20, 20, 20);
+  color: white;
   transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
   -moz-transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
   -webkit-transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
@@ -236,8 +239,8 @@ ul {
 
 .logo {
   display: block;
-  padding: 30px;
-  text-align: center
+  padding: 40px;
+  text-align: left
 }
 
 .main {
@@ -314,7 +317,8 @@ img {
 }
 
 .gallery-pic {
-  width: 100%
+  width: 100%;
+  min-height: 300px
 }
 
 @media(max-width: 62em) {

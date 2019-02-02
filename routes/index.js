@@ -27,19 +27,6 @@ router.get("/collection/:year", (req, res) => {
   );
 });
 
-router.get("/collection/older", (req, res) => {
-  const startYear = new Date().getFullYear() - 3;
-  work.find(
-    { year: { $lt: startYear }, visibility: true },
-    "title client titlePic year",
-    (err, workList) => {
-      if (err) return res.status(500).send(err);
-      return res.render("collection", {
-        workList: workList
-      });
-    }
-  );
-});
 
 router.get("/collection/detail/:id", (req, res) => {
   work.findById(req.params.id, (err, workDetail) => {
