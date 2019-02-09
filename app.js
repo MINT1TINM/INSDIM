@@ -16,10 +16,10 @@ var app = express();
 const mongoose = require("mongoose");
 
 const configDev = [];
-configDev.usr = "mint";
-configDev.pwd = "INSCHINAisdead1";
+configDev.usr = "root";
+configDev.pwd = "insdim";
 const url = `mongodb://${configDev.usr}:${configDev.pwd}@39.96.61.110/INSLENS`;
-const urlBase = 'mongodb://127.0.0.1/INSLENS'
+const urlBase = "mongodb://mint:INSCHINAisdead1@127.0.0.1:27017/INSLENS";
 
 mongoose.connect(
   urlBase,
