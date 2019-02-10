@@ -103,6 +103,10 @@ span {
   color: rgb(48, 48, 48)
 }
 
+.back {
+  font-size: 15px
+}
+
 ul {
   -webkit-padding-start: 0em;
 }
@@ -236,7 +240,7 @@ ul {
 
 .sidebar-sub {
   margin-left: 140px;
-  margin-top: -46px
+  margin-top: -138px
 }
 
 .sidebar-sub-links {

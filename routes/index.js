@@ -14,7 +14,7 @@ for (let index = thisYear; index >= 2014; index--) {
 router.get("/", (req, res) => {
   news.find((err, newsList) => {
     if (err) return res.status(500).send(err);
-    return res.render("index", { newsList: newsList });
+    return res.render("index", { newsList: newsList, yearList: yearList });
   });
 });
 
@@ -45,10 +45,15 @@ router.get("/collection/:year/:id", (req, res) => {
 });
 
 router.get("/about", (req, res) => {
-  res.render("about");
+  console.log(yearList);
+  res.render("about", {
+    yearList: yearList
+  });
 });
 router.get("/contact", (req, res) => {
-  res.render("contact");
+  res.render("contact", {
+    yearList: yearList
+  });
 });
 
 module.exports = router;
