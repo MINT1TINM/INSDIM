@@ -11,10 +11,7 @@ var app = express();
 // mongoose
 const mongoose = require("mongoose");
 
-const configDev = [];
-configDev.usr = "mint";
-configDev.pwd = "INSCHINAisdead1";
-const urlBase = "mongodb://127.0.0.1/INSLENS";
+const urlBase = "mongodb://mint:INSCHINAisdead1@127.0.0.1:27017/INSLENS";
 
 mongoose.connect(urlBase, { useNewUrlParser: true, useFindAndModify: false });
 const db = mongoose.connection;
