@@ -312,9 +312,12 @@ img {
 
 /* about */
 
+.about-section {
+  text-align: center
+}
+
 .slogan {
-  text-align: center;
-  padding: 90px 0;
+  padding: 50px 0;
   letter-spacing: 0.2em;
   font-size: 32px
 }
