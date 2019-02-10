@@ -3,12 +3,8 @@ var express = require("express");
 var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
-var bodyParser = require("body-parser");
 
 var indexRouter = require("./routes/index");
-var workRouter = require("./routes/work");
-// var partnerRouter = require("./routes/partner");
-// var subsidiaryRouter = require("./routes/subsidiary");
 
 var app = express();
 
@@ -18,13 +14,9 @@ const mongoose = require("mongoose");
 const configDev = [];
 configDev.usr = "mint";
 configDev.pwd = "INSCHINAisdead1";
-const url = `mongodb://${configDev.usr}:${configDev.pwd}@39.96.61.110/INSLENS`;
-const urlBase = 'mongodb://127.0.0.1/INSLENS'
+const urlBase = "mongodb://127.0.0.1/INSLENS";
 
-mongoose.connect(
-  urlBase,
-  { useNewUrlParser: true, useFindAndModify: false }
-);
+mongoose.connect(urlBase, { useNewUrlParser: true, useFindAndModify: false });
 const db = mongoose.connection;
 db.on("open", () => {
   console.log("MongoDB Connection Success");
@@ -44,16 +36,11 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/", indexRouter);
-app.use("/work", workRouter);
-// app.use("/subsidiary", subsidiaryRouter);
-// app.use("/partner", partnerRouter);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
   next(createError(404));
 });
-
-app.use(bodyParser.urlencoded({ extended: true }));
 
 // error handler
 app.use((err, req, res, next) => {
