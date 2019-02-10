@@ -45,7 +45,6 @@ router.get("/collection/:year/:id", (req, res) => {
 });
 
 router.get("/about", (req, res) => {
-  console.log(yearList);
   res.render("about", {
     yearList: yearList
   });
