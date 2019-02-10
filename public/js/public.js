@@ -47,38 +47,6 @@ function toggleFolder() {
   }
 }
 
-function detectDevice() {
-  const isMobile = {
-    Android: function() {
-      return navigator.userAgent.match(/Android/i) ? true : false;
-    },
-    BlackBerry: function() {
-      return navigator.userAgent.match(/BlackBerry/i) ? true : false;
-    },
-    iOS: function() {
-      return navigator.userAgent.match(/iPhone|iPad|iPod/i) ? true : false;
-    },
-    Windows: function() {
-      return navigator.userAgent.match(/IEMobile/i) ? true : false;
-    },
-    any: function() {
-      return (
-        isMobile.Android() ||
-        isMobile.BlackBerry() ||
-        isMobile.iOS() ||
-        isMobile.Windows()
-      );
-    }
-  };
-  if (isMobile.any()) {
-    const device = "mobile";
-    return device;
-  } else {
-    const device = "desktop";
-    return device;
-  }
-}
-
 const getMainRoute = (() => {
   var currentRoute = window.location.pathname.split("/")[1];
   var subLinks = document.getElementById("collection-sub");
@@ -87,7 +55,10 @@ const getMainRoute = (() => {
   } else {
     var currentA = document.getElementById("news");
   }
-  if (currentRoute == "collection" || detectDevice() == "mobile") {
+  if (
+    currentRoute == "collection" ||
+    document.documentElement.clientWidth < 1000
+  ) {
     subLinks.style.display = "block";
   } else {
     subLinks.style.display = "none";
