@@ -4,7 +4,7 @@ block content
   section
     a(href="/collection/"+workDetail.year) 
       i(class="iconfont icon-iconarrowl") 
-      span back to collection
+      span(class="back") back to collection
     h1= workDetail.title
     h4(class="mb-50")= workDetail.client
 
@@ -13,7 +13,7 @@ block content
 
     each item in workDetail.pic
       div(class="gallery-item")
-        img(class="gallery-pic" src="/img/lazy.gif" data-src=item.url)
+        img(class="gallery-pic lazy" src="/img/lazy.gif" data-src=item.url)
 
   script(src="/js/lazyload.min.js")
 

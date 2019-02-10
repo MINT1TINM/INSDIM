@@ -25,13 +25,13 @@ html
       div(class="sidebar-links")
         a(class="sidebar-standard-links" id="news" href="/") news
         a(class="sidebar-standard-links" id="collection" href="/collection/2019") collection 
-
-        div(class="sidebar-sub" id="collection-sub")
-          if yearList
-            each item in yearList
-              a(class="sidebar-sub-links" id=item href="/collection/"+item) #{item}        
+      
         a(class="sidebar-standard-links" id="about" href="/about") about
         a(class="sidebar-standard-links" id="contact" href="/contact") contact
+
+        div(class="sidebar-sub" id="collection-sub")
+          each item in yearList
+            a(class="sidebar-sub-links" id=item href="/collection/"+item) #{item}        
 
     div(class="main")
       div(class="sidebar-toggle")
@@ -43,7 +43,7 @@ html
       footer
         div(class="container-fluid")
           -var thisYear = new Date().getFullYear()
-          h3 INSLENS #{thisYear}
+          h3 COPYRIGHT © #{thisYear} INSLENS
           h4 think by inspiration
           h5 沪ICP备16025975号-1
 

@@ -16,6 +16,7 @@ const lazyLoad = gallery => {
   for (let index = 0; index < gallery.length; index++) {
     if (isElementInViewport(gallery[index])) {
       showPic(gallery[index]);
+      gallery[index].setAttribute("class", "gallery-pic lazy-n");
     }
   }
 };
@@ -39,7 +40,7 @@ const throttle = (fn, delay, atleast) => {
   };
 };
 
-var gallery = document.getElementsByClassName("gallery-pic");
+var gallery = document.getElementsByClassName("lazy");
 
 window.onload = lazyLoad(gallery);
 
