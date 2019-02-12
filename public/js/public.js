@@ -64,6 +64,7 @@ const getMainRoute = (() => {
   }
   currentA.style.backgroundColor = "rgb(20,20,20)";
   currentA.style.color = "#fff";
+  currentA.style.pointerEvents = "none";
 })();
 
 const getSubRoute = (() => {
