@@ -59,6 +59,7 @@
   -webkit-margin-before: 0.2em;
   -webkit-margin-after: 0.2em
 }
+
 .grid-title span {
   line-height: 1.1;
   color: rgb(150, 150, 150)
@@ -69,6 +70,9 @@
 }
 
 @media(max-width: 62em) {
+  .grid-item {
+    margin: 5px;
+  }
   .grid-wrapper {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -80,8 +84,8 @@
   }
   .grid-title-mob {
     display: block;
-    margin-top: 25px;
-    margin-bottom: 50px
+    margin-top: 15px;
+    margin-bottom: 20px
   }
   .grid-title-mob h3 {
     line-height: 1.1;
