@@ -240,7 +240,8 @@ ul {
 
 .sidebar-sub {
   margin-left: 140px;
-  margin-top: -138px
+  margin-top: -138px;
+  opacity: 0;
 }
 
 .sidebar-sub-links {
@@ -265,7 +266,7 @@ ul {
 }
 
 section {
-  padding: 80px 0
+  padding: 40px 0
 }
 
 footer {
@@ -294,7 +295,7 @@ img {
 /* news */
 
 .news-item {
-  padding: 50px 0;
+  padding: 30px 0;
 }
 
 .news-title {
@@ -303,11 +304,11 @@ img {
   text-transform: uppercase;
   letter-spacing: 0.2em;
   line-height: 1.4;
-  margin-bottom: 20px
+  margin-bottom: 10px
 }
 
 .news-pic {
-  padding: 20px 0;
+  padding: 10px 0;
 }
 
 /* about */
@@ -317,7 +318,7 @@ img {
 }
 
 .slogan {
-  padding: 50px 0;
+  padding: 70px 0 10px 0;
   letter-spacing: 0.2em;
   font-size: 32px
 }

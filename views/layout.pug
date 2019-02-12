@@ -24,14 +24,14 @@ html
         img(src="/img/favicon.jpg" width="120" height="120" alt="")
       div(class="sidebar-links")
         a(class="sidebar-standard-links" id="news" href="/") news
-        a(class="sidebar-standard-links" id="collection" href="/collection/2019") collection 
-      
+        a(class="sidebar-standard-links" id="folder" onclick="toggleFolder()") collection 
         a(class="sidebar-standard-links" id="about" href="/about") about
         a(class="sidebar-standard-links" id="contact" href="/contact") contact
-
-        div(class="sidebar-sub" id="collection-sub")
+        div(class="sidebar-sub" id="folder-sub")
           each item in yearList
-            a(class="sidebar-sub-links" id=item href="/collection/"+item) #{item}        
+            a(class="sidebar-sub-links" id=item href="/collection/"+item) #{item} 
+
+       
 
     div(class="main")
       div(class="sidebar-toggle")
@@ -48,7 +48,7 @@ html
           h5 沪ICP备16025975号-1
 
   script(src="/js/loading.min.js")
-  script(src="/js/public.min.js")
+  script(src="/js/public.js")
 
 
 

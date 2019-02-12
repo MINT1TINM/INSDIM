@@ -30,38 +30,37 @@ function resize() {
 
 function toggleFolder() {
   var folder = document.getElementById("folder");
-  var foldGroup = folder.nextSibling;
-  var toggle = folder.firstElementChild;
+  var foldGroup = document.getElementById("folder-sub");
+  // var toggle = folder.firstElementChild;
   if (folder.hasAttribute("status")) {
     folder.removeAttribute("status");
     foldGroup.style.height = "0";
     foldGroup.style.opacity = "0";
     foldGroup.style.pointerEvents = "none";
-    toggle.setAttribute("class", "iconfont icon-arrow_d");
+    // toggle.setAttribute("class", "iconfont icon-arrow_d");
   } else {
     folder.setAttribute("status", "open");
+    folder.style.backgroundColor = "transparent";
+    folder.style.color = "#383838";
     foldGroup.style.height = "100%";
     foldGroup.style.opacity = "1";
     foldGroup.style.pointerEvents = "auto";
-    toggle.setAttribute("class", "iconfont icon-arrow_u");
+    // toggle.setAttribute("class", "iconfont icon-arrow_u");
   }
 }
 
 const getMainRoute = (() => {
   var currentRoute = window.location.pathname.split("/")[1];
-  var subLinks = document.getElementById("collection-sub");
+  var subLinks = document.getElementById("folder-sub");
   if (currentRoute) {
     var currentA = document.getElementById(currentRoute);
   } else {
     var currentA = document.getElementById("news");
   }
-  if (
-    currentRoute == "collection" ||
-    document.documentElement.clientWidth < 1000
-  ) {
+  if (currentRoute == "collection") {
+    var currentA = document.getElementById("folder");
     subLinks.style.display = "block";
-  } else {
-    subLinks.style.display = "none";
+    subLinks.style.opacity = "1";
   }
   currentA.style.backgroundColor = "rgb(20,20,20)";
   currentA.style.color = "#fff";

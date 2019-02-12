@@ -2,6 +2,8 @@ extends layout
 
 block content
   section
+    h1 news
+    
     each item in newsList
       div(class="news-item")
         div(class="news-title")= item.title
