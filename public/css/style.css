@@ -1,5 +1,5 @@
 @import url('https://fonts.loli.net/css?family=Dosis|Open+Sans');
-@import url('https://at.alicdn.com/t/font_1033024_u4qw8uidx7r.css');
+@import url('https://at.alicdn.com/t/font_1033024_1mf6ivdb8s.css');
 /* main */
 
 body {
@@ -204,7 +204,7 @@ ul {
   line-height: 1.9;
   letter-spacing: 2px;
   margin-left: 40px;
-  width: 100px;
+  width: 120px;
   /* font-family: 'Open Sans'; */
   /* background-color: #fff; */
   transition: background-color 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
@@ -239,8 +239,8 @@ ul {
 }
 
 .sidebar-sub {
-  margin-left: 140px;
-  margin-top: -138px;
+  margin-left: 160px;
+  margin-top: -142px;
   opacity: 0;
 }
 
@@ -314,11 +314,11 @@ img {
 /* about */
 
 .about-section {
-  text-align: center
+  text-align: left
 }
 
 .slogan {
-  padding: 70px 0 10px 0;
+  padding: 10px 0;
   letter-spacing: 0.2em;
   font-size: 32px
 }
