@@ -31,13 +31,13 @@ function resize() {
 function toggleFolder() {
   var folder = document.getElementById("folder");
   var foldGroup = document.getElementById("folder-sub");
-  // var toggle = folder.firstElementChild;
+  var toggle = folder.firstElementChild;
   if (folder.hasAttribute("status")) {
     folder.removeAttribute("status");
     foldGroup.style.height = "0";
     foldGroup.style.opacity = "0";
     foldGroup.style.pointerEvents = "none";
-    // toggle.setAttribute("class", "iconfont icon-arrow_d");
+    toggle.setAttribute("class", "iconfont icon-iconarrowr");
   } else {
     folder.setAttribute("status", "open");
     folder.style.backgroundColor = "transparent";
@@ -45,7 +45,7 @@ function toggleFolder() {
     foldGroup.style.height = "100%";
     foldGroup.style.opacity = "1";
     foldGroup.style.pointerEvents = "auto";
-    // toggle.setAttribute("class", "iconfont icon-arrow_u");
+    toggle.setAttribute("class", "iconfont icon-iconarrowl");
   }
 }
 
