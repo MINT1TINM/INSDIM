@@ -9,7 +9,7 @@ block content
           a(href="/collection/"+year+"/"+item._id)
             div(class="grid-box")
               div(class="grid-thumbnail")
-                img(class="gallery-pic" src=item.titlePic )
+                img(class="gallery-pic" src=JSON.parse(item.titlePic).url )
               div(class="grid-title") 
                 h3= item.title
                 span= item.client
