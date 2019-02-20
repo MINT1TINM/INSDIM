@@ -24,7 +24,6 @@ router.get("/collection/:year", (req, res) => {
     "title client titlePic",
     (err, workList) => {
       if (err) return res.status(500).send(err);
-      // console.log(workList);
       return res.render("collection", {
         workList: workList,
         year: req.params.year,
