@@ -20,7 +20,7 @@ router.get("/", (req, res) => {
 
 router.get("/collection/:year", (req, res) => {
   work.find(
-    { year: req.params.year, visibility: "1" },
+    { year: req.params.year, visibility: true },
     "title client titlePic",
     (err, workList) => {
       if (err) return res.status(500).send(err);
