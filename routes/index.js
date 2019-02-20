@@ -22,6 +22,9 @@ router.get("/collection/:year", (req, res) => {
   work.find(
     { year: req.params.year, visibility: true },
     "title client titlePic",
+    {
+      sort: [{ _id: -1 }]
+    },
     (err, workList) => {
       if (err) return res.status(500).send(err);
       return res.render("collection", {
