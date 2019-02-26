@@ -323,6 +323,12 @@ img {
   font-size: 32px
 }
 
+.slogan-sub {
+  padding: 10px 0;
+  letter-spacing: 0.2em;
+  font-size: 28px
+}
+
 /* map */
 
 .map {
