@@ -9,17 +9,15 @@ const newsSchema = new Schema({
   },
   author: String,
   content: String,
-  pic: [
-    {
-      title: String,
-      url: String,
-      createTime: {
-        type: String,
-        default: Date.now()
-      },
-      type: String
+  titlePic: {
+    title: String,
+    url: String,
+    name: String,
+    createTime: {
+      type: Date,
+      default: Date.now()
     }
-  ]
+  }
 });
 
 module.exports = mongoose.model("News", newsSchema);
