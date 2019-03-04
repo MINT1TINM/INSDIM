@@ -1,14 +1,16 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const newsSchema = new Schema({
+const postSchema = new Schema({
   title: String,
-  createTime: {
-    type: String,
-    default: Date.now()
-  },
   author: String,
   content: String,
+  videoLink: String,
+  visibility: String,
+  createTime: {
+    type: Date,
+    default: Date.now()
+  },
   titlePic: {
     title: String,
     url: String,
@@ -17,7 +19,18 @@ const newsSchema = new Schema({
       type: Date,
       default: Date.now()
     }
-  }
+  },
+  pic: [
+    {
+      title: String,
+      url: String,
+      name: String,
+      createTime: {
+        type: Date,
+        default: Date.now()
+      }
+    }
+  ]
 });
 
-module.exports = mongoose.model("News", newsSchema);
+module.exports = mongoose.model("post", postSchema);
