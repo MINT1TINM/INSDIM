@@ -7,7 +7,7 @@ block content
     each item in newsList
       div(class="news-item")
         div(class="news-title")= item.title
-        p= item.content
+        p!= item.content
         div(class="news-pic")
-          img(src=item.titlePic.src)
+          img(src=item.titlePic.url)
       hr
