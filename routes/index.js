@@ -12,7 +12,7 @@ for (let index = thisYear; index >= 2014; index--) {
 
 /* GET home page. */
 router.get("/", (req, res) => {
-  news.find((err, newsList) => {
+  news.find({ visibility: true }, (err, newsList) => {
     if (err) return res.status(500).send(err);
     return res.render("index", { newsList: newsList, yearList: yearList });
   });
