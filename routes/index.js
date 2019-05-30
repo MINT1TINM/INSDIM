@@ -14,7 +14,7 @@ for (let index = thisYear; index >= 2014; index--) {
 router.get("/", (req, res) => {
   news.find(
     { visibility: true },
-    "title author content titlePic",
+    "title author type collaborator content titlePic",
     {
       sort: [{ _id: -1 }]
     },
