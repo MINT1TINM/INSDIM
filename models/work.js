@@ -6,6 +6,8 @@ const workSchema = new Schema({
   title: String,
   year: String,
   client: String,
+  collaborator: String,
+  pictures: String,
   description: String,
   videoLink: String,
   visibility: String,

@@ -6,9 +6,12 @@ block content
       i(class="iconfont icon-iconarrowl") 
       span(class="back") back to collection
     h1= workDetail.title
-    h4()= workDetail.client
-    h5()= workDetail.type
-    h5(class="mb-50")= workDetail.collaborator
+    h4()=|client:
+      = workDetail.client
+    h4()=|collaborator:
+      = workDetail.collaborator
+    h4(class="mb-50")=|pictures:
+      = workDetail.pictures
 
     div(class="description mt-50 mb-50")
       p!= workDetail.description
