@@ -6,16 +6,20 @@ block content
       i(class="iconfont icon-iconarrowl")
       span(class="back") back to collection
     h1(id="work-title")= workDetail.title
-    h3 client: #{workDetail.client}
     if workDetail.collaborator
-      h3 collaborator: #{workDetail.collaborator}
-    h3(class="mb-50") pictures: #{workDetail.pictures}
+      h3 client: #{workDetail.client}
+      h3(class="mb-50") collaborator: #{workDetail.collaborator}
+    else
+      h3(class="mb-50") client: #{workDetail.client}
+
 
     div(class="description mt-50 mb-50")
       p!= workDetail.description
     each item in workDetail.pic
       div(class="gallery-item")
         img(class="gallery-pic lazy" src="/img/lazy.gif" data-src=item.url)
+    h3(class="mt-50 mb-50") pictures: #{workDetail.pictures}
+
 
   script(src="/js/lazyload.min.js")
   script.
