@@ -7,7 +7,8 @@ block content
       span(class="back") back to collection
     h1= workDetail.title
     h3 client: #{workDetail.client}
-    h3 collaborator: #{workDetail.collaborator}
+    if workDetail.collaborator
+      h3 collaborator: #{workDetail.collaborator}
     h3(class="mb-50") pictures: #{workDetail.pictures}
 
     div(class="description mt-50 mb-50")
@@ -17,3 +18,6 @@ block content
         img(class="gallery-pic lazy" src="/img/lazy.gif" data-src=item.url)
 
   script(src="/js/lazyload.min.js")
+  script.
+    document.title = workDetail.title + " | INSDIM"
+    
