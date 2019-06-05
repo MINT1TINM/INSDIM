@@ -5,7 +5,7 @@ block content
     a(href="/collection/"+workDetail.year)
       i(class="iconfont icon-iconarrowl")
       span(class="back") back to collection
-    h1= workDetail.title
+    h1(id="work-title")= workDetail.title
     h3 client: #{workDetail.client}
     if workDetail.collaborator
       h3 collaborator: #{workDetail.collaborator}
@@ -19,5 +19,5 @@ block content
 
   script(src="/js/lazyload.min.js")
   script.
-    document.title = workDetail.title + " | INSDIM"
+    document.title = document.getElementById("work-title") + " | INSDIM"
     
