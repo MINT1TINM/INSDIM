@@ -35,6 +35,7 @@ router.get("/collection/:year", (req, res) => {
       sort: [{ _id: -1 }]
     },
     (err, workList) => {
+      console.log(workList);
       if (err) return res.status(500).send(err);
       return res.render("collection", {
         workList: workList,
