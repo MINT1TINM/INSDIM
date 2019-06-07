@@ -27,28 +27,28 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.get("/collection/:year", (req, res) => {
-  work.find(
-    { year: req.params.year, visibility: true },
-    "title client titlePic",
-    {
-      sort: [{ _id: -1 }]
-    },
-    (err, workList) => {
-      console.log(workList);
-      if (err) return res.status(500).send(err);
-      return res.render("collection", {
-        workList: workList,
-        year: req.params.year,
-        yearList: yearList
-      });
-    }
-  );
+router.get("/collection/:year", async (req, res) => {
+  try {
+    const workList = await work.find({
+      year: req.params.year,
+      visibility: true
+    });
+    console.log(workList);
+
+    return res.render("collection", {
+      workList: workList,
+      year: req.params.year,
+      yearList: yearList
+    });
+  } catch (err) {
+    return res.status(500).send(err);
+  }
 });
 
 router.get("/collection/:year/:id", async (req, res) => {
   try {
     const workDetail = await work.findById(req.params.id);
+    console.log(workDetail);
     res.render("collectionDetail", {
       workDetail: workDetail,
       yearList: yearList

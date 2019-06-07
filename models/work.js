@@ -10,7 +10,7 @@ const workSchema = new Schema({
   pictures: String,
   description: String,
   videoLink: String,
-  visibility: String,
+  visibility: Boolean,
   createTime: {
     type: Date,
     default: Date.now()
@@ -36,5 +36,5 @@ const workSchema = new Schema({
   ]
 });
 
-const work = mongoose.model("Work", workSchema);
+const work = mongoose.model("work", workSchema);
 export default work;
