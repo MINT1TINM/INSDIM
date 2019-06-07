@@ -10,13 +10,12 @@ var app = express();
 
 // mongoose
 import mongoose from "mongoose";
+import connectionString from "./config";
 
-const configDev = [];
-configDev.usr = "mint";
-configDev.pwd = "INSCHINAisdead1";
-const urlBase = "mongodb://127.0.0.1/INSLENS";
-
-mongoose.connect(urlBase, { useNewUrlParser: true, useFindAndModify: false });
+mongoose.connect(connectionString, {
+  useNewUrlParser: true,
+  useFindAndModify: false
+});
 const db = mongoose.connection;
 db.on("open", () => {
   console.log("MongoDB Connection Success");
