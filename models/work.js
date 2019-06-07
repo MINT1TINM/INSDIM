@@ -15,7 +15,15 @@ const workSchema = new Schema({
     type: Date,
     default: Date.now()
   },
-  titlePic: String,
+  titlePic: {
+    title: String,
+    url: String,
+    name: String,
+    createTime: {
+      type: Date,
+      default: Date.now()
+    }
+  },
   pic: [
     {
       title: String,

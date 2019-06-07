@@ -12,10 +12,9 @@ var app = express();
 import mongoose from "mongoose";
 import connectionString from "./config";
 
-mongoose.connect(connectionString, {
-  useNewUrlParser: true,
-  useFindAndModify: false
-});
+const urlBase = "mongodb://mint:INSCHINAisdead1@127.0.0.1:27017/INSLENS";
+
+mongoose.connect(urlBase, { useNewUrlParser: true, useFindAndModify: false });
 const db = mongoose.connection;
 db.on("open", () => {
   console.log("MongoDB Connection Success");
