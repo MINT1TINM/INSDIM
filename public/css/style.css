@@ -1,5 +1,5 @@
-@import url('https://fonts.loli.net/css?family=Dosis|Open+Sans');
-@import url('https://at.alicdn.com/t/font_1033024_1mf6ivdb8s.css');
+@import url("https://fonts.loli.net/css?family=Dosis|Open+Sans");
+@import url("https://at.alicdn.com/t/font_1033024_1mf6ivdb8s.css");
 /* main */
 
 body {
@@ -26,7 +26,7 @@ body {
 
 a {
   color: #111;
-  text-decoration: none
+  text-decoration: none;
 }
 
 a:hover {
@@ -53,35 +53,35 @@ hr {
   border: 0;
   background-color: #000;
   margin-top: 20px;
-  border-top: 1px solid #eee
+  border-top: 1px solid #eee;
 }
 
 h1 {
   font-weight: 300;
-  font-size: 25px;
+  font-size: 26px;
   letter-spacing: 0.2em;
 }
 
 h2 {
   font-weight: 400;
-  letter-spacing: 0.2em
+  letter-spacing: 0.2em;
 }
 
 h3 {
   font-weight: 400;
   letter-spacing: 0.2em;
-  font-size: 14px
+  font-size: 18px;
 }
 
 h4 {
   font-size: 13px;
   font-weight: 400;
-  letter-spacing: 0.2em
+  letter-spacing: 0.2em;
 }
 
 h5 {
   font-size: 8px;
-  font-weight: 400
+  font-weight: 400;
 }
 
 p {
@@ -90,21 +90,21 @@ p {
 }
 
 .mb-50 {
-  margin-bottom: 50px
+  margin-bottom: 50px;
 }
 
 .mt-50 {
-  margin-top: 50px
+  margin-top: 50px;
 }
 
 span {
   letter-spacing: 0.1em;
   font-size: 10px;
-  color: rgb(48, 48, 48)
+  color: rgb(48, 48, 48);
 }
 
 .back {
-  font-size: 15px
+  font-size: 15px;
 }
 
 ul {
@@ -120,9 +120,9 @@ ul {
   background-color: #fff;
   z-index: 1000;
   pointer-events: none;
-  transition: opacity 0.5s cubic-bezier(0.000, 0.000, 0.580, 1.000);
-  -moz-transition: opacity 0.5s cubic-bezier(0.000, 0.000, 0.580, 1.000);
-  -webkit-transition: opacity 0.5s cubic-bezier(0.000, 0.000, 0.580, 1.000);
+  transition: opacity 0.5s cubic-bezier(0, 0, 0.58, 1);
+  -moz-transition: opacity 0.5s cubic-bezier(0, 0, 0.58, 1);
+  -webkit-transition: opacity 0.5s cubic-bezier(0, 0, 0.58, 1);
 }
 
 .spinner {
@@ -130,10 +130,11 @@ ul {
   height: 40px;
   position: relative;
   top: 45%;
-  left: 50%
+  left: 50%;
 }
 
-.double-bounce1, .double-bounce2 {
+.double-bounce1,
+.double-bounce2 {
   width: 100%;
   height: 100%;
   border-radius: 50%;
@@ -142,32 +143,34 @@ ul {
   position: absolute;
   top: 0;
   left: 0;
-  -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
-  animation: sk-bounce 2.0s infinite ease-in-out;
+  -webkit-animation: sk-bounce 2s infinite ease-in-out;
+  animation: sk-bounce 2s infinite ease-in-out;
 }
 
 .double-bounce2 {
-  -webkit-animation-delay: -1.0s;
-  animation-delay: -1.0s;
+  -webkit-animation-delay: -1s;
+  animation-delay: -1s;
 }
 
 @-webkit-keyframes sk-bounce {
-  0%, 100% {
-    -webkit-transform: scale(0.0)
+  0%,
+  100% {
+    -webkit-transform: scale(0);
   }
   50% {
-    -webkit-transform: scale(1.0)
+    -webkit-transform: scale(1);
   }
 }
 
 @keyframes sk-bounce {
-  0%, 100% {
-    transform: scale(0.0);
-    -webkit-transform: scale(0.0);
+  0%,
+  100% {
+    transform: scale(0);
+    -webkit-transform: scale(0);
   }
   50% {
-    transform: scale(1.0);
-    -webkit-transform: scale(1.0);
+    transform: scale(1);
+    -webkit-transform: scale(1);
   }
 }
 
@@ -187,7 +190,7 @@ ul {
 }
 
 .sidebar-toggle {
-  display: none !important
+  display: none !important;
 }
 
 .sidebar-links {
@@ -207,17 +210,17 @@ ul {
   width: 120px;
   /* font-family: 'Open Sans'; */
   /* background-color: #fff; */
-  transition: background-color 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
-  -moz-transition: background-color 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
-  -webkit-transition: background-color 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
+  transition: background-color 0.27s cubic-bezier(0, 0, 0.58, 1);
+  -moz-transition: background-color 0.27s cubic-bezier(0, 0, 0.58, 1);
+  -webkit-transition: background-color 0.27s cubic-bezier(0, 0, 0.58, 1);
 }
 
 .sidebar a:hover {
   background-color: rgb(20, 20, 20);
   color: white;
-  transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
-  -moz-transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
-  -webkit-transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
+  transition: all 0.27s cubic-bezier(0, 0, 0.58, 1);
+  -moz-transition: all 0.27s cubic-bezier(0, 0, 0.58, 1);
+  -webkit-transition: all 0.27s cubic-bezier(0, 0, 0.58, 1);
 }
 
 .sidebar-standard-links {
@@ -246,34 +249,34 @@ ul {
 
 .sidebar-sub-links {
   padding: 5px;
-  width: 50px !important
+  width: 50px !important;
 }
 
 .sidebar-fold-links {
   font-size: 12px;
-  padding: 5px
+  padding: 5px;
 }
 
 .logo {
   display: block;
   padding: 40px;
-  text-align: left
+  text-align: left;
 }
 
 .main {
   margin-left: 270px;
-  padding: 20px 0
+  padding: 20px 0;
 }
 
 section {
-  padding: 40px 0
+  padding: 40px 0;
 }
 
 footer {
   text-align: center;
   font-size: 13px;
   letter-spacing: 0.5em;
-  margin: 100px 0 10px 0
+  margin: 100px 0 10px 0;
 }
 
 img {
@@ -304,7 +307,7 @@ img {
   text-transform: uppercase;
   letter-spacing: 0.2em;
   line-height: 1.4;
-  margin-bottom: 10px
+  margin-bottom: 10px;
 }
 
 .news-pic {
@@ -314,59 +317,59 @@ img {
 /* about */
 
 .about-section {
-  text-align: left
+  text-align: left;
 }
 
 .slogan {
   padding: 10px 0;
   letter-spacing: 0.2em;
-  font-size: 32px
+  font-size: 32px;
 }
 
 .slogan-sub {
   padding: 10px 0;
   letter-spacing: 0.2em;
-  font-size: 28px
+  font-size: 28px;
 }
 
 /* map */
 
 .map {
   height: 500px;
-  margin: 40px 0 70px 0
+  margin: 40px 0 70px 0;
 }
 
 /* gallery */
 
 .gallery-item {
-  margin: 30px 0
+  margin: 30px 0;
 }
 
 .gallery-pic {
   width: 100%;
 }
 
-@media(max-width: 62em) {
+@media (max-width: 62em) {
   .sidebar {
     width: 0%;
-    opacity: 0
+    opacity: 0;
   }
   .main {
     margin-left: 0;
-    padding: 20px 0
+    padding: 20px 0;
   }
   .container-fluid {
-    padding: 0 5%
+    padding: 0 5%;
   }
   .sidebar-toggle {
     display: block !important;
   }
   .spinner {
-    left: 45%
+    left: 45%;
   }
   .toggle-close {
     width: 37px !important;
     padding-left: 10px;
-    padding-right: 5px
+    padding-right: 5px;
   }
 }

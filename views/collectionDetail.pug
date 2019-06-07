@@ -2,9 +2,6 @@ extends layout
 
 block content
   section
-    a(href="/collection/"+workDetail.year)
-      i(class="iconfont icon-iconarrowl")
-      span(class="back") back to collection
     h1(id="work-title")= workDetail.title
     if workDetail.collaborator
       h3 client: #{workDetail.client}
@@ -18,8 +15,9 @@ block content
     each item in workDetail.pic
       div(class="gallery-item")
         img(class="gallery-pic lazy" src="/img/lazy.gif" data-src=item.url)
-    h4(class="mb-50") pictures: #{workDetail.pictures}
-
+    h4 pictures: #{workDetail.pictures}
+    a(href="/collection/"+workDetail.year)
+      h4 back to collection
 
   script(src="/js/lazyload.min.js")
   script.
