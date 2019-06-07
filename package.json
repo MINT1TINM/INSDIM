@@ -13,12 +13,12 @@
     "http-errors": "~1.7.2",
     "mongoose": "^5.5.13",
     "morgan": "~1.9.1",
-    "pug": "2.0.3"
-  },
-  "devDependencies": {
+    "pug": "2.0.3",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.7.0",
-    "babel-register": "^6.26.0",
+    "babel-register": "^6.26.0"
+  },
+  "devDependencies": {
     "eslint": "^5.16.0"
   }
 }
