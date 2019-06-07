@@ -10,7 +10,7 @@ const workSchema = new Schema({
   pictures: String,
   description: String,
   videoLink: String,
-  visibility: Boolean,
+  visibility: String,
   createTime: {
     type: Date,
     default: Date.now()

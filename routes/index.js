@@ -31,7 +31,7 @@ router.get("/collection/:year", async (req, res) => {
   try {
     const workList = await work.find({
       year: req.params.year,
-      visibility: true
+      visibility: "true"
     });
     console.log(workList);
 
