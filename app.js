@@ -1,15 +1,15 @@
-var createError = require("http-errors");
-var express = require("express");
-var path = require("path");
-var cookieParser = require("cookie-parser");
-var logger = require("morgan");
+import createError from "http-errors";
+import express from "express";
+import path from "path";
+import cookieParser from "cookie-parser";
+import logger from "morgan";
 
-var indexRouter = require("./routes/index");
+import indexRouter from "./routes/index";
 
 var app = express();
 
 // mongoose
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 const configDev = [];
 configDev.usr = "mint";

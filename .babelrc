@@ -1,0 +1,12 @@
+{
+  "plugins": [
+    [
+      "transform-runtime",
+      {
+        "polyfill": false,
+        "regenerator": true
+      }
+    ]
+  ]
+}
+// 允许使用新语法
