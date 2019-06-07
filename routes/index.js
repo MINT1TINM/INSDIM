@@ -31,7 +31,6 @@ router.get("/collection/:year", async (req, res) => {
   try {
     const workList = await work.find(
       { year: req.params.year, visibility: true },
-      "title client titlePic",
       {
         sort: [{ _id: -1 }]
       }
@@ -69,4 +68,4 @@ router.get("/contact", (req, res) => {
   });
 });
 
-export default router
+export default router;
