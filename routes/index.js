@@ -29,10 +29,16 @@ router.get("/", async (req, res) => {
 
 router.get("/collection/:year", async (req, res) => {
   try {
-    const workList = await work.find({
-      year: req.params.year,
-      visibility: "true"
-    });
+    const workList = await work.find(
+      {
+        year: req.params.year,
+        visibility: "true"
+      },
+      "title titlePic client",
+      {
+        sort: [{ _id: -1 }]
+      }
+    );
     console.log(workList);
 
     return res.render("collection", {
