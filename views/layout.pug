@@ -23,11 +23,11 @@ html
       div(class="logo")
         img(src="/img/favicon.jpg" width="120" height="120" alt="")
       div(class="sidebar-links")
-        a(class="sidebar-standard-links" id="news" href="/") news
-        a(class="sidebar-standard-links" id="folder" onclick="toggleFolder()") collection 
+        a(class="sidebar-standard-links" id="news" href="/")= __("news")
+        a(class="sidebar-standard-links" id="folder" onclick="toggleFolder()")= __("collection")
           i(class="iconfont icon-iconarrowr")
-        a(class="sidebar-standard-links" id="about" href="/about") about
-        a(class="sidebar-standard-links" id="contact" href="/contact") contact
+        a(class="sidebar-standard-links" id="about" href="/about")= __("about")
+        a(class="sidebar-standard-links" id="contact" href="/contact")= __("contact")
         div(class="sidebar-sub" id="folder-sub")
           each item in yearList
             a(class="sidebar-sub-links" id=item href="/collection/"+item) #{item} 

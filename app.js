@@ -3,6 +3,7 @@ import express from "express";
 import path from "path";
 import cookieParser from "cookie-parser";
 import logger from "morgan";
+import i18n from "i18n";
 
 import indexRouter from "./routes/index";
 
@@ -36,6 +37,22 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/", indexRouter);
+
+// i18n
+var setI18n = () => {
+  const i18nOptions = {
+    locales: ["en", "zh-CN"],
+    defaultLocale: "zh-CN",
+    directory: path.join(__dirname, "./locale"),
+    objectNotation: true,
+    updateFiles: true
+  };
+
+  i18n.configure(i18nOptions);
+  return i18n.init;
+};
+
+app.use(setI18n());
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {

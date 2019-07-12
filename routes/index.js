@@ -5,6 +5,8 @@ var router = Router();
 import work from "../models/work";
 import news from "../models/news";
 
+import i18n from "i18n";
+
 const yearList = [];
 const thisYear = parseInt(new Date().getFullYear());
 for (let index = thisYear; index >= 2014; index--) {
@@ -21,7 +23,15 @@ router.get("/", async (req, res) => {
         sort: [{ _id: -1 }]
       }
     );
-    res.render("index", { newsList: newsList, yearList: yearList });
+
+    res.locals.__ = res.__ = function() {
+      return i18n.__.apply(req, arguments);
+    };
+
+    res.render("index", {
+      newsList: newsList,
+      yearList: yearList
+    });
   } catch (err) {
     return res.status(500).send(err);
   }
@@ -40,6 +50,10 @@ router.get("/collection/:year", async (req, res) => {
       }
     );
     console.log(workList);
+
+    res.locals.__ = res.__ = function() {
+      return i18n.__.apply(req, arguments);
+    };
 
     return res.render("collection", {
       workList: workList,
