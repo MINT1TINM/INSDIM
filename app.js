@@ -53,16 +53,25 @@ app.use(setI18n());
 
 app.use((req, res, next) => {
   const locale = req.acceptsLanguages();
+  console.log(locale);
   res.locals.__ = res.__ = function() {
     return i18n.__.apply(req, arguments);
   };
 
+  var targetLocale = "";
   if (req.cookies.locale) {
-    i18n.setLocale(req, req.cookies.locale);
+    targetLocale = req.cookies.locale;
   } else {
-    i18n.setLocale(req, locale[0]);
+    targetLocale = locale[0];
     res.cookie("locale", locale[0]);
   }
+
+  // for safari
+  if (targetLocale.indexOf("zh") != -1) {
+    targetLocale = "zh-CN";
+    res.cookie("locale", "zh-CN");
+  }
+  i18n.setLocale(req, targetLocale);
 
   next();
 });
