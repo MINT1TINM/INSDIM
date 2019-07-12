@@ -2,5 +2,17 @@
   "news": "新闻",
   "collection": "陈列",
   "about": "关于",
-  "contact": "联系"
+  "contact": "联系",
+  "address": "地址",
+  "addressDetail": "中国 上海市静安区 沪太路1895弄 51号 12栋201室",
+  "service": "客户服务",
+  "joinUs": "加入我们",
+  "ourDimension": "我们的“维度”",
+  "serviceContent": "空间 // 产品 // 平面 // 开发",
+  "subsidiaries": "旗下品牌",
+  "partners": "合作伙伴",
+  "client": "客户",
+  "collaborator": "合作",
+  "pictures": "图像",
+  "backToCollection": "回到陈列"
 }

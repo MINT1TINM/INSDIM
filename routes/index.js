@@ -69,6 +69,11 @@ router.get("/collection/:year/:id", async (req, res) => {
   try {
     const workDetail = await work.findById(req.params.id);
     console.log(workDetail);
+
+    res.locals.__ = res.__ = function() {
+      return i18n.__.apply(req, arguments);
+    };
+
     res.render("collectionDetail", {
       workDetail: workDetail,
       yearList: yearList
@@ -79,11 +84,18 @@ router.get("/collection/:year/:id", async (req, res) => {
 });
 
 router.get("/about", (req, res) => {
+  res.locals.__ = res.__ = function() {
+    return i18n.__.apply(req, arguments);
+  };
+
   res.render("about", {
     yearList: yearList
   });
 });
 router.get("/contact", (req, res) => {
+  res.locals.__ = res.__ = function() {
+    return i18n.__.apply(req, arguments);
+  };
   res.render("contact", {
     yearList: yearList
   });
