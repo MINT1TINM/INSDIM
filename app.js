@@ -56,10 +56,12 @@ app.use((req, res, next) => {
   res.locals.__ = res.__ = function() {
     return i18n.__.apply(req, arguments);
   };
-  i18n.setLocale(req, locale[0]);
 
   if (req.cookies.locale) {
     i18n.setLocale(req, req.cookies.locale);
+  } else {
+    i18n.setLocale(req, locale[0]);
+    res.cookie("locale", locale[0]);
   }
 
   next();

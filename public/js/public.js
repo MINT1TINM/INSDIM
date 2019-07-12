@@ -81,3 +81,27 @@ const switchLocale = locale => {
   document.cookie = `locale=${locale}`;
   location.reload();
 };
+
+const getCookie = cname => {
+  var name = cname + "=";
+  var ca = document.cookie.split(";");
+  for (var i = 0; i < ca.length; i++) {
+    var c = ca[i].trim();
+    if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
+  }
+  return "";
+};
+
+const getLocale = (() => {
+  const currentLocale = getCookie("locale");
+
+  var localeSwitcher = document.getElementsByClassName("sidebar-lang-switch");
+  for (let i = 0; i < localeSwitcher.length; i++) {
+    if (localeSwitcher[i].id == currentLocale) {
+      localeSwitcher[i].style.backgroundColor = "rgb(20, 20, 20)";
+      localeSwitcher[i].style.color = "#fff";
+    }
+  }
+
+  console.log(currentLocale);
+})();
