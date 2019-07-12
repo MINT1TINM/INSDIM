@@ -2,5 +2,17 @@
   "news": "news",
   "collection": "collection",
   "about": "about",
-  "contact": "contact"
+  "contact": "contact",
+  "address": "address",
+  "addressDetail": "ROOM 201, BLOCK 12, NO. 51, LANE 1895, HUTAI ROAD, JINGAN DISTRICT, SHANGHAI, CHINA",
+  "service": "service",
+  "joinUs": "join us ",
+  "ourDimension": "our dimension",
+  "serviceContent": "spacial // product // graphic // development",
+  "subsidiaries": "subsidiaries",
+  "partners": "partners",
+  "client": "client",
+  "collaborator": "collaborator",
+  "pictures": "pictures",
+  "backToCollection": "back to collection"
 }

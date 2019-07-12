@@ -3,12 +3,12 @@ extends layout
 block content
   section
     h1=__("about")
-    div(class="news-title" style="padding-top:30px") our dimension
+    div(class="news-title" style="padding-top:30px")= __("ourDimension")
     div(class="slogan about-section") form inside function
     div(class="slogan-sub about-section") () => {new formData()}
-    p(class="about-section") spatial // product // graphic // development
+    p(class="about-section")= __("serviceContent")
   
-    div(class="news-title mt-50") subsidiaries
+    div(class="news-title mt-50")= __("subsidiaries")
     div(class="grid-wrapper-3")
       div(class="grid-item-no-hover")
         img(src="/img/brand/humasim.jpg")
@@ -16,7 +16,7 @@ block content
       div(class="grid-item-no-hover")
         img(src="/img/brand/dimlab.jpg")
         h3 DIMLAB
-    div(class="news-title") partners
+    div(class="news-title")= __("partners")
     div(class="grid-wrapper-3")
       div(class="grid-item-no-hover")
         img(src="/img/brand/wenext.jpg")
