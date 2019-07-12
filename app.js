@@ -36,14 +36,12 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
-app.use("/", indexRouter);
-
 // i18n
 var setI18n = () => {
   const i18nOptions = {
     locales: ["en", "zh-CN"],
-    defaultLocale: "zh-CN",
     directory: path.join(__dirname, "./locale"),
+    defaultLocale: "en",
     objectNotation: true,
     updateFiles: true
   };
@@ -51,8 +49,24 @@ var setI18n = () => {
   i18n.configure(i18nOptions);
   return i18n.init;
 };
-
 app.use(setI18n());
+
+app.use((req, res, next) => {
+  const locale = req.acceptsLanguages();
+  res.locals.__ = res.__ = function() {
+    return i18n.__.apply(req, arguments);
+  };
+  i18n.setLocale(req, locale[0]);
+
+  if (req.cookies.locale) {
+    i18n.setLocale(req, req.cookies.locale);
+  }
+
+  next();
+});
+
+// router
+app.use("/", indexRouter);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {

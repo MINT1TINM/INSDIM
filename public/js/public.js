@@ -75,3 +75,9 @@ const getSubRoute = (() => {
     subLinks.style.color = "#fff";
   }
 })();
+
+const switchLocale = locale => {
+  console.log(locale);
+  document.cookie = `locale=${locale}`;
+  location.reload();
+};

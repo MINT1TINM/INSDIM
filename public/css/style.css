@@ -227,7 +227,7 @@ ul {
   line-height: 1.9;
   letter-spacing: 2px;
   margin-left: 40px;
-  width: 120px;
+  width: 100px;
   /* font-family: 'Open Sans'; */
   /* background-color: #fff; */
   transition: background-color 0.27s cubic-bezier(0, 0, 0.58, 1);
@@ -249,6 +249,13 @@ ul {
   cursor: pointer;
 }
 
+.sidebar-lang-switch {
+  padding: 10px;
+  margin-left: 0px !important;
+  width: 20px !important;
+  cursor: pointer;
+}
+
 .sidebar-fold-group {
   list-style-type: none;
   padding-inline-start: 0;
@@ -263,7 +270,7 @@ ul {
 
 .sidebar-sub {
   margin-left: 160px;
-  margin-top: -142px;
+  margin-top: -256px;
   opacity: 0;
 }
 

@@ -28,11 +28,13 @@ html
           i(class="iconfont icon-iconarrowr")
         a(class="sidebar-standard-links" id="about" href="/about")= __("about")
         a(class="sidebar-standard-links" id="contact" href="/contact")= __("contact")
+        div(class="lang-switcher")
+          a(class="sidebar-lang-switch" onclick="switchLocale('en')") en
+          a(class="sidebar-lang-switch" onclick="switchLocale('zh-CN')") cn   
         div(class="sidebar-sub" id="folder-sub")
           each item in yearList
             a(class="sidebar-sub-links" id=item href="/collection/"+item) #{item} 
-
-       
+    
 
     div(class="main")
       div(class="sidebar-toggle")

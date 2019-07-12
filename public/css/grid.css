@@ -8,6 +8,11 @@
   padding: 15px 0;
 }
 
+.lang-switcher {
+  margin-left: 0px !important;
+  padding: 15px 0 15px 40px;
+}
+
 .grid-wrapper-3 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
