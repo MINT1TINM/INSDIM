@@ -4,10 +4,10 @@ block content
   section
     h1(id="work-title")= workDetail.title
     if workDetail.collaborator
-      h3 client: #{workDetail.client}
-      h3(class="mb-30") collaborator: #{workDetail.collaborator}
+      h3 #{__("client")}: #{workDetail.client}
+      h3(class="mb-30") #{__("collaborator")}: #{workDetail.collaborator}
     else
-      h3(class="mb-30") client: #{workDetail.client}
+      h3(class="mb-30") #{__("client")}: #{workDetail.client}
 
 
     div(class="description mt-30 mb-20")
@@ -15,9 +15,9 @@ block content
     each item in workDetail.pic
       div(class="gallery-item")
         img(class="gallery-pic lazy" src="/img/lazy.gif" data-src=item.url)
-    h4 pictures: #{workDetail.pictures}
+    h4 #{__("pictures")}: #{workDetail.pictures}
     a(href="/collection/"+workDetail.year)
-      h4(style="font-weight:600") back to collection
+      h4(style="font-weight:600") #{__("backToCollection")}
 
   script(src="/js/lazyload.min.js")
   script.
