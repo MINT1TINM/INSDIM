@@ -19,6 +19,30 @@ body {
   user-select: none;
 }
 
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #000;
+    color: #fff;
+  }
+  p {
+    color: rgb(223, 223, 223);
+    letter-spacing: 0.1em;
+  }
+  .sidebar {
+    background-color: #000 !important;
+  }
+  .sidebar a {
+    color: #fff !important;
+  }
+  .loader {
+    background-color: #000 !important;
+  }
+  .double-bounce1,
+  .double-bounce2 {
+    background-color: rgb(255, 255, 255);
+  }
+}
+
 .menu {
   font-size: 30px;
   cursor: pointer;
@@ -32,21 +56,6 @@ a {
 a:hover {
   color: rgb(43, 43, 43);
   text-decoration: none;
-}
-
-::selection {
-  background: #1b1b1b;
-  color: rgb(233, 233, 233);
-}
-
-::-moz-selection {
-  background: #1b1b1b;
-  color: rgb(233, 233, 233);
-}
-
-::-webkit-selection {
-  background: #1b1b1b;
-  color: rgb(233, 233, 233);
 }
 
 hr {
