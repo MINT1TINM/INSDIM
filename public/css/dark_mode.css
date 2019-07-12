@@ -1,0 +1,35 @@
+@media (prefers-color-scheme: dark) {
+  body {
+    background: rgb(36, 36, 36);
+    color: #fff;
+  }
+  p {
+    color: rgb(179, 179, 179);
+    letter-spacing: 0.1em;
+  }
+  .sidebar {
+    background: rgb(36, 36, 36);
+  }
+  .sidebar a {
+    color: #fff;
+  }
+  .loader {
+    background-color: rgb(20, 20, 20);
+  }
+  .double-bounce1,
+  .double-bounce2 {
+    background-color: rgb(255, 255, 255);
+  }
+  a {
+    color: #fff;
+  }
+  a:hover {
+    color: rgb(255, 255, 255);
+  }
+  hr {
+    border-top: 1px solid rgb(155, 155, 155);
+  }
+  #folder {
+    color: #fff !important;
+  }
+}

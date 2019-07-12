@@ -29,7 +29,7 @@ router.get("/", async (req, res) => {
       yearList: yearList
     });
   } catch (err) {
-    return res.status(500).send(err);
+    return res.render("error");
   }
 });
 
@@ -53,7 +53,7 @@ router.get("/collection/:year", async (req, res) => {
       yearList: yearList
     });
   } catch (err) {
-    return res.status(500).send(err);
+    return res.render("error");
   }
 });
 
@@ -67,7 +67,7 @@ router.get("/collection/:year/:id", async (req, res) => {
       yearList: yearList
     });
   } catch (err) {
-    return res.status(500).send(err);
+    return res.render("error");
   }
 });
 

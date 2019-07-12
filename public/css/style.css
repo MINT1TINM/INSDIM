@@ -19,39 +19,6 @@ body {
   user-select: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  body {
-    background: rgb(36, 36, 36);
-    color: #fff;
-  }
-  p {
-    color: rgb(179, 179, 179) !important;
-    letter-spacing: 0.1em;
-  }
-  .sidebar {
-    background: rgb(36, 36, 36) !important;
-  }
-  .sidebar a {
-    color: #fff !important;
-  }
-  .loader {
-    background-color: rgb(20, 20, 20) !important;
-  }
-  .double-bounce1,
-  .double-bounce2 {
-    background-color: rgb(255, 255, 255);
-  }
-  a {
-    color: #fff;
-  }
-  a:hover {
-    color: rgb(153, 153, 153);
-  }
-  hr {
-    border-top: 1px solid rgb(155, 155, 155);
-  }
-}
-
 .menu {
   font-size: 30px;
   cursor: pointer;
