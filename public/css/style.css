@@ -21,21 +21,21 @@ body {
 
 @media (prefers-color-scheme: dark) {
   body {
-    background: #000;
+    background: rgb(36, 36, 36);
     color: #fff;
   }
   p {
-    color: rgb(223, 223, 223);
+    color: rgb(179, 179, 179) !important;
     letter-spacing: 0.1em;
   }
   .sidebar {
-    background-color: #000 !important;
+    background: rgb(36, 36, 36) !important;
   }
   .sidebar a {
     color: #fff !important;
   }
   .loader {
-    background-color: #000 !important;
+    background-color: rgb(20, 20, 20) !important;
   }
   .double-bounce1,
   .double-bounce2 {
