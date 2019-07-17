@@ -7,16 +7,17 @@ block content
       each item in workList  
         div(class="grid-item")
           a(href="/collection/"+year+"/"+item._id)
+            div(class="grid-title-mob")
+              h3= item.title
+              span= item.client
+          a(href="/collection/"+year+"/"+item._id)
             div(class="grid-box")
               div(class="grid-thumbnail")
                 img(class="gallery-pic" src=item.titlePic.url )
               div(class="grid-title") 
                 h3= item.title
                 span= item.client
-          a(href="/collection/"+year+"/"+item._id)
-            div(class="grid-title-mob")
-              h3= item.title
-              span= item.client
+
 
   script(src="/js/grid.min.js")
   script(src="/js/lazyload.min.js")
