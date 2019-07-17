@@ -98,8 +98,8 @@
   }
   .grid-title-mob {
     display: block;
-    margin-top: 15px;
-    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
   }
   .grid-title-mob h3 {
     line-height: 1.1;
