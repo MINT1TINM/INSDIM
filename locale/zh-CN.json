@@ -11,8 +11,8 @@
   "serviceContent": "空间 // 产品 // 平面 // 开发",
   "subsidiaries": "旗下品牌",
   "partners": "合作伙伴",
-  "client": "客户",
-  "collaborator": "合作",
-  "pictures": "图像",
+  "client": "客户: ",
+  "collaborator": "合作: ",
+  "pictures": "图像: ",
   "backToCollection": "回到陈列"
 }
