@@ -3,7 +3,7 @@ extends layout
 block content
   section
     h1 #{__("collection")} - #{year}
-    div(class="grid-wrapper mt-50")    
+    div(class="grid-wrapper")    
       each item in workList  
         div(class="grid-item")
           a(href="/collection/"+year+"/"+item._id)
