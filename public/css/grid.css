@@ -79,7 +79,20 @@
 }
 
 .grid-title-mob {
-  display: none;
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+.grid-title-mob h3 {
+  line-height: 1.1;
+  margin-block-end: 0.3em;
+  font-weight: 500;
+  -webkit-margin-before: 0.2em;
+  -webkit-margin-after: 0.2em;
+}
+.grid-title-mob span {
+  line-height: 1.1;
+  color: rgb(102, 102, 102);
 }
 
 @media (max-width: 62em) {
@@ -95,21 +108,5 @@
   }
   .grid-title {
     display: none;
-  }
-  .grid-title-mob {
-    display: block;
-    margin-top: 20px;
-    margin-bottom: 15px;
-  }
-  .grid-title-mob h3 {
-    line-height: 1.1;
-    margin-block-end: 0.3em;
-    font-weight: 500;
-    -webkit-margin-before: 0.2em;
-    -webkit-margin-after: 0.2em;
-  }
-  .grid-title-mob span {
-    line-height: 1.1;
-    color: rgb(102, 102, 102);
   }
 }
