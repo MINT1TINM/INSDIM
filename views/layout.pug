@@ -29,8 +29,8 @@ html
         a(class="sidebar-standard-links" id="about" href="/about")= __("about")
         a(class="sidebar-standard-links" id="contact" href="/contact")= __("contact")
         div(class="lang-switcher")
-          a(class="sidebar-lang-switch" id="en" onclick="switchLocale('en')") en
           a(class="sidebar-lang-switch" id="zh-CN" onclick="switchLocale('zh-CN')") cn   
+          a(class="sidebar-lang-switch" id="en" onclick="switchLocale('en')") en
         div(class="sidebar-sub" id="folder-sub")
           each item in yearList
             a(class="sidebar-sub-links" id=item href="/collection/"+item) #{item} 
