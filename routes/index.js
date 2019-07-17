@@ -23,6 +23,7 @@ router.get("/", async (req, res) => {
         sort: [{ _id: -1 }]
       }
     );
+    console.log(newsList);
 
     res.render("index", {
       newsList: newsList,
