@@ -5,6 +5,9 @@ var router = Router();
 import work from "../models/work";
 import news from "../models/news";
 
+import { chiefDesigner, awards, exhibition } from "../utils/timeline";
+import { getLocale } from "../utils/locale";
+
 import i18n from "i18n";
 
 const yearList = [];
@@ -91,9 +94,21 @@ router.get("/about", (req, res) => {
     yearList: yearList
   });
 });
+
 router.get("/contact", (req, res) => {
   res.render("contact", {
     yearList: yearList
+  });
+});
+
+router.get("/timeline", (req, res) => {
+  const locale = getLocale(req);
+  console.log(locale);
+  res.render("timeline", {
+    yearList: yearList,
+    chiefDesigner: chiefDesigner,
+    awards: awards,
+    exhibition: exhibition
   });
 });
 

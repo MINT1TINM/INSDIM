@@ -4,6 +4,7 @@
   "about": "关于",
   "contact": "联系",
   "address": "地址",
+  "timeline": "年表",
   "addressDetail": "中国上海市 静安区 沪太路1895弄51号 12栋201室",
   "service": "客户服务",
   "joinUs": "加入我们",
@@ -15,5 +16,8 @@
   "collaborator": "合作: ",
   "pictures": "图像: ",
   "backToCollection": "回到陈列",
-  "backHome": "回到首页"
+  "backHome": "回到首页",
+  "chiefDesigner": "设计代表",
+  "awards": "获奖",
+  "exhibition": "参展"
 }

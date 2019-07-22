@@ -4,6 +4,7 @@
   "about": "about",
   "contact": "contact",
   "address": "address",
+  "timeline": "timeline",
   "addressDetail": "ROOM 201, BLOCK 12, NO. 51, LANE 1895, HUTAI ROAD, JINGAN DISTRICT, SHANGHAI, CHINA",
   "service": "service",
   "joinUs": "join us ",
@@ -15,5 +16,8 @@
   "collaborator": "with ",
   "pictures": "pictures by ",
   "backToCollection": "back to collection",
-  "backHome": "back home"
+  "backHome": "back home",
+  "chiefDesigner": "chief designer",
+  "awards": "awards",
+  "exhibition": "exhibition"
 }

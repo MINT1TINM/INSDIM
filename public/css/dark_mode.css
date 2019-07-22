@@ -32,4 +32,8 @@
   #folder {
     color: #fff !important;
   }
+  span,
+  .grid-title-mob span {
+    color: rgb(179, 179, 179);
+  }
 }

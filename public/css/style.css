@@ -103,6 +103,10 @@ p {
   margin-top: 20px;
 }
 
+.show-mob {
+  display: none;
+}
+
 span {
   letter-spacing: 0.1em;
   font-size: 10px;
@@ -256,7 +260,7 @@ ul {
 
 .sidebar-sub {
   margin-left: 160px;
-  margin-top: -256px;
+  margin-top: -304px;
   opacity: 0;
 }
 
@@ -362,6 +366,11 @@ img {
   width: 100%;
 }
 
+.news-link {
+  color: #303030;
+  text-decoration: underline;
+}
+
 @media (max-width: 62em) {
   .sidebar {
     width: 0%;
@@ -384,5 +393,11 @@ img {
     width: 37px !important;
     padding-left: 10px;
     padding-right: 5px;
+  }
+  .hide-mob {
+    display: none;
+  }
+  .show-mob {
+    display: block;
   }
 }
