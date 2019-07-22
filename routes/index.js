@@ -34,6 +34,20 @@ router.get("/", async (req, res) => {
   }
 });
 
+router.get("/news/:id", async (req, res) => {
+  try {
+    const post = await news.findById(req.params.id);
+    console.log(post);
+
+    res.render("news", {
+      post: post,
+      yearList: yearList
+    });
+  } catch (err) {
+    return res.render("error");
+  }
+});
+
 router.get("/collection/:year", async (req, res) => {
   try {
     const workList = await work.find(

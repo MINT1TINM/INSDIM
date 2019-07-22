@@ -8,4 +8,7 @@ block content
       div(class="news-item")
         div(class="news-title")= item.title
         p!= item.content
+        a(href="/news/"+item._id style="color:#303030;text-decoration:underline")
+          span learn more
+
       hr

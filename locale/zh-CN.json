@@ -14,5 +14,6 @@
   "client": "客户: ",
   "collaborator": "合作: ",
   "pictures": "图像: ",
-  "backToCollection": "回到陈列"
+  "backToCollection": "回到陈列",
+  "backHome": "回到首页"
 }

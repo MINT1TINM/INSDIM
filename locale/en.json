@@ -14,5 +14,6 @@
   "client": "for ",
   "collaborator": "with ",
   "pictures": "pictures by ",
-  "backToCollection": "back to collection"
+  "backToCollection": "back to collection",
+  "backHome": "back home"
 }

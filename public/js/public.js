@@ -64,12 +64,18 @@ const getMainRoute = (() => {
   }
   currentA.style.backgroundColor = "rgb(20,20,20)";
   currentA.style.color = "#fff";
-  currentA.style.pointerEvents = "none";
+
+  if (currentRoute.indexOf("collection") >= 0) {
+    currentA.style.pointerEvents = "none";
+  }
 })();
 
 const getSubRoute = (() => {
-  var currentSubRoute = window.location.pathname.split("/")[2];
-  if (currentSubRoute) {
+  var route = window.location.pathname.split("/");
+  var currentSubRoute = route[2];
+  // check if is collection
+  var currentRoute = route[1];
+  if (currentSubRoute && currentRoute == "collection") {
     var subLinks = document.getElementById(currentSubRoute);
     subLinks.style.backgroundColor = "rgb(20,20,20)";
     subLinks.style.color = "#fff";
