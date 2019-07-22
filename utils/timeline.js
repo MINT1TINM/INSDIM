@@ -48,7 +48,8 @@ const awards = [
 const exhibition = [
   {
     time: "2016/11",
-    content: "ABOUT SET 坐具专题展"
+    content: "ABOUT SET 坐具专题展",
+    enContent: "xxx"
   },
   {
     time: "2017/02",

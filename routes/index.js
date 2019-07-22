@@ -21,12 +21,22 @@ router.get("/", async (req, res) => {
   try {
     const newsList = await news.find(
       { visibility: true },
-      "title author type collaborator content titlePic",
+      "title author type collaborator content titlePic createTime",
       {
         sort: [{ _id: -1 }]
       }
     );
-    console.log(newsList);
+
+    // date format
+    for (let i = 0; i < newsList.length; i++) {
+      let createTime = new Date(newsList[i].createTime);
+      newsList[i].createTimeFormat =
+        createTime.getFullYear() +
+        "/" +
+        createTime.getMonth() +
+        "/" +
+        createTime.getDate();
+    }
 
     res.render("index", {
       newsList: newsList,
@@ -103,12 +113,12 @@ router.get("/contact", (req, res) => {
 
 router.get("/timeline", (req, res) => {
   const locale = getLocale(req);
-  console.log(locale);
   res.render("timeline", {
     yearList: yearList,
     chiefDesigner: chiefDesigner,
     awards: awards,
-    exhibition: exhibition
+    exhibition: exhibition,
+    locale: locale
   });
 });
 

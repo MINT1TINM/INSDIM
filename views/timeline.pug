@@ -3,30 +3,39 @@ extends layout
 block content
   section
     h1 #{__("timeline")}
-    div(class="grid-wrapper-2") 
+    div(class="grid-wrapper-timeline") 
       div(class="grid-item show-mob")   
         img(src="/img/timeline.jpg")
       div(class="grid-item timeline-item-container")
-        h2 #{__("chiefDesigner")} 
+        h2 #{__("chiefDesigner")} - BUG
         each item in chiefDesigner 
           div(class="timeline-wrapper") 
             div(class="timeline-item")
               p #{item.time}
             div(class="timeline-item")
-              p #{item.content}
+              if locale=='en'
+                p #{item.enContent}      
+              else 
+                p #{item.content}  
         h2(class="mt-30") #{__("awards")}  
         each item in awards  
           div(class="timeline-wrapper") 
             div(class="timeline-item")
               p #{item.time}
             div(class="timeline-item")
-              p #{item.content}        
+              if locale=='en'
+                p #{item.enContent}      
+              else 
+                p #{item.content}         
         h2(class="mt-30") #{__("exhibition")}  
         each item in exhibition  
           div(class="timeline-wrapper") 
             div(class="timeline-item")
               p #{item.time}
             div(class="timeline-item")
-              p #{item.content}      
+              if locale=='en'
+                p #{item.enContent}      
+              else 
+                p #{item.content}      
       div(class="grid-item hide-mob")   
-        img(src="/img/timeline.jpg")
+        img(src="/img/timeline.jpg" style="max-width:250px")
