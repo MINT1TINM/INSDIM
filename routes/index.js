@@ -112,19 +112,20 @@ router.get("/contact", (req, res) => {
 });
 
 router.get("/timeline", (req, res) => {
+  const locale
   try {
-    const locale = getLocale(req);
-    res.render("timeline", {
-      yearList: yearList,
-      chiefDesigner: chiefDesigner,
-      awards: awards,
-      exhibition: exhibition,
-      locale: locale
-    });
+    locale = getLocale(req);
   } catch (err) {
     console.log(err);
     return res.render("error");
   }
+  res.render("timeline", {
+    yearList: yearList,
+    chiefDesigner: chiefDesigner,
+    awards: awards,
+    exhibition: exhibition,
+    locale: locale
+  });
 });
 
 export default router;
