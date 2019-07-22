@@ -1,5 +1,6 @@
 const getLocale = req => {
   const cookies = req.headers.cookie;
+  console.log(cookies);
   let ca = cookies.split("; ");
   let name = "locale=";
   let full = ca[1].length;
