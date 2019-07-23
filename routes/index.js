@@ -106,8 +106,10 @@ router.get("/about", (req, res) => {
 });
 
 router.get("/contact", (req, res) => {
+  const locale = getLocale(req);
   res.render("contact", {
-    yearList: yearList
+    yearList: yearList,
+    locale: locale
   });
 });
 
