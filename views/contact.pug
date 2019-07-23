@@ -11,21 +11,18 @@ block content
     p mint@insdim.com
     hr
     h3= __("joinUs")
-    li 建筑设计师
-    p 技能 AutoCAD / VectorWorks / RhinoCeros / v-ray / Affinity Suite 
-    li 室内设计师
-    p 技能 AUTOCAD / VECTORWORKS / V-Ray / AFFINITY SUITE
-    li 产品设计师
-    p 技能 RHINOCEROS / FUSION 360 / V-ray / CINEMA 4D / AFFINITY SUITE
-    li 程序设计师
-    p 技能 javascript / css / python / golang / affinity suite
+    li= __("architect")
+    p #{__("skills")} AutoCAD / VectorWorks / RhinoCeros / v-ray / Affinity Suite 
+    li= __("interiorDesigner")
+    p #{__("skills")} AUTOCAD / VECTORWORKS / V-Ray / AFFINITY SUITE
+    li= __("productDesigner")
+    p #{__("skills")} RHINOCEROS / FUSION 360 / V-ray / CINEMA 4D / AFFINITY SUITE
+    li= __("developer")
+    p #{__("skills")} javascript / css / python / golang / affinity suite
     hr
-    h3 提交简历
+    h3=__("submit")
     p join@insdim.com
-    //- li 申请表 
-    //-   span
-    //-     a(href="/") 点击下载 
-    li 作品集  
+    li=__("portfolio")  
 
   script(src="https://webapi.amap.com/maps?v=1.4.12&key=3c1d39d0b39894e0e3d96e369f24f497")
   script.
