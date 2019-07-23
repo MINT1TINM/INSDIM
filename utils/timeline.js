@@ -20,7 +20,7 @@ const chiefDesigner = [
   },
   {
     time: "2019/01/25",
-    content: "发布DIMLAB数据分析实验室"
+    content: "成立DIMLAB数据分析实验室"
   },
   {},
   {},
@@ -32,36 +32,40 @@ const chiefDesigner = [
 
 const awards = [
   {
-    time: "2019/05/14",
-    content: "BLOOM获得“汇创青春”一等奖 (TOP 15)"
+    time: "2018/02/15",
+    content: "GREENWOOD入围「红点设计奖」"
   },
   {
     time: "2019/05/14",
-    content: "WAISTLINE获得“汇创青春”一等奖"
+    content: "BLOOM获得「汇创青春」一等奖 (TOP 15)"
   },
   {
     time: "2019/05/14",
-    content: "DRAWER获得“汇创青春”三等奖"
+    content: "WAISTLINE获得「汇创青春」一等奖"
+  },
+  {
+    time: "2019/05/14",
+    content: "DRAWER获得「汇创青春」三等奖"
   }
 ];
 
 const exhibition = [
   {
     time: "2016/11",
-    content: "ABOUT SET 坐具专题展",
+    content: "「ABOUT SET」坐具专题展",
     enContent: "xxx"
   },
   {
     time: "2017/02",
-    content: "ANILAMP COLLECTION 灯具专题展"
+    content: "「ANILAMP COLLECTION」灯具专题展"
   },
   {
     time: "2018/07",
-    content: "WENEXT - FUTURE MATERIAL 新材料展"
+    content: "「FUTURE MATERIAL」新材料展"
   },
   {
     time: "2019/05",
-    content: "“会创青春”优秀作品展"
+    content: "「汇创青春」优秀作品展"
   }
 ];
 
