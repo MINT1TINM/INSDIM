@@ -5,4 +5,7 @@ block content
     a(href="/")
       h4(style="font-weight:600") #{__("backHome")}
     h2= post.title
-    p!= post.content
+    if locale=='en'
+      p!= post.contentEn
+    else 
+      p!= post.content

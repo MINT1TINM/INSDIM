@@ -48,13 +48,15 @@ router.get("/", async (req, res) => {
 });
 
 router.get("/news/:id", async (req, res) => {
+  const locale = getLocale(req);
   try {
     const post = await news.findById(req.params.id);
     console.log(post);
 
     res.render("news", {
       post: post,
-      yearList: yearList
+      yearList: yearList,
+      locale: locale
     });
   } catch (err) {
     return res.render("error");
@@ -86,13 +88,15 @@ router.get("/collection/:year", async (req, res) => {
 });
 
 router.get("/collection/:year/:id", async (req, res) => {
+  const locale = getLocale(req);
   try {
     const workDetail = await work.findById(req.params.id);
     console.log(workDetail);
 
     res.render("collectionDetail", {
       workDetail: workDetail,
-      yearList: yearList
+      yearList: yearList,
+      locale: locale
     });
   } catch (err) {
     return res.render("error");
