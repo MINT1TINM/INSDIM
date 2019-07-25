@@ -30,7 +30,7 @@ const chiefDesigner = [
   {},
   {
     time: "2019/04/20",
-    content: "获得上海市优秀毕业作品",
+    content: "获得「上海市优秀毕业作品」",
     enContent: "best diploma awards of shanghai"
   }
 ];
@@ -60,24 +60,34 @@ const awards = [
 
 const exhibition = [
   {
-    time: "2016/11",
+    time: "2016/12",
     content: "「ABOUT SET」坐具专题展",
     enContent: "「 about set 」 exhibition"
   },
   {
-    time: "2017/02",
+    time: "2017/06",
     content: "「ANILAMP COLLECTION」灯具专题展",
     enContent: "「 anilamp collection 」 exhibition"
   },
   {
-    time: "2018/07",
+    time: "2018/03",
     content: "「FUTURE MATERIAL」新材料展",
     enContent: "「 future material 」 exhibition"
   },
   {
+    time: "2018/05",
+    content: "「TIME OF TIME」专题展",
+    enContent: "「 time of time 」 exhibition"
+  },
+  {
+    time: "2019/03",
+    content: "「ANOTHER VERSION」作品展",
+    enContent: "「 another version 」 exhibition"
+  },
+  {
     time: "2019/05",
     content: "「汇创青春」优秀作品展",
-    enContent: "「 think youth 」 best of 2019 exhibition"
+    enContent: "「 think youth  best of 2019」 exhibition"
   }
 ];
 
