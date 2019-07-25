@@ -85,7 +85,7 @@ const getSubRoute = (() => {
 const switchLocale = locale => {
   console.log(locale);
   document.cookie = `locale=${locale}`;
-  location.reload();
+  window.location.reload(true);
 };
 
 const getCookie = cname => {
