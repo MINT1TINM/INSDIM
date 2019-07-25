@@ -9,6 +9,7 @@ const workSchema = new Schema({
   collaborator: String,
   pictures: String,
   description: String,
+  descriptionEn: String,
   videoLink: String,
   visibility: String,
   createTime: {

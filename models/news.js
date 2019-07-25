@@ -5,6 +5,7 @@ const postSchema = new Schema({
   title: String,
   author: String,
   content: String,
+  contentEn: String,
   post: String,
   videoLink: String,
   visibility: String,
