@@ -21,7 +21,7 @@ router.get("/", async (req, res) => {
   try {
     const newsList = await news.find(
       { visibility: true },
-      "title author type collaborator titlePic createTime",
+      "title author type collaborator titlePic createTime intro introEn",
       {
         sort: [{ _id: -1 }]
       }
