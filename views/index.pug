@@ -8,7 +8,10 @@ block content
       div(class="news-item")
         div(class="news-title")= item.title
         span= item.createTimeFormat
-        br
+        if locale=='en'
+          p!= item.introEn
+        else
+          p!= item.intro
         a(href="/news/"+item._id class="news-link")
           span= __("learnMore")
 
