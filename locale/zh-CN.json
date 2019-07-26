@@ -24,7 +24,10 @@
   "interiorDesigner": "室内设计师",
   "productDesigner": "产品设计师",
   "developer": "程序设计师",
-  "submit": "提交简历",
+  "graphicDesigner": "平面设计师",
+  "internship": "实习生",
+  "application": "申请职位",
+  "cv": "个人简历",
   "portfolio": "作品集",
   "skills": "技能",
   "learnMore": "了解更多"

@@ -23,7 +23,10 @@
   "interiorDesigner": "interior designer",
   "productDesigner": "product designer",
   "developer": "developer",
-  "submit": "submit",
+  "graphicDesigner": "graphic designer",
+  "internship": "internship",
+  "application": "application",
+  "cv": "c.v.",
   "portfolio": "portfolio",
   "skills": "skills - ",
   "learnMore": "learn more"
