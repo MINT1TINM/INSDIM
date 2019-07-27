@@ -12,17 +12,17 @@ const chiefDesigner = [
     enContent: "found INSLENS"
   },
   {
-    time: "2016/10/06",
-    content: "INSDIM 正式成立",
-    enContent: "found INSDIM (originally named INSLENS)"
-  },
-  {
     time: "2017/02/14",
     content: "发布自有品牌HUMASIM",
     enContent: "introducing individual brand HUMASIM"
   },
   {
-    time: "2019/01/25",
+    time: "2018/11/20",
+    content: "发布新名称INSDIM",
+    enContent: "introducing INSDIM (originally named INSLENS)"
+  },
+  {
+    time: "2019/02/04",
     content: "成立DIMLAB数据分析实验室",
     enContent: "found DIMLAB - a data analysis laboratory"
   },
@@ -70,14 +70,14 @@ const exhibition = [
     enContent: "「 anilamp collection 」 exhibition"
   },
   {
-    time: "2018/03",
-    content: "「FUTURE MATERIAL」新材料展",
-    enContent: "「 future material 」 exhibition"
-  },
-  {
     time: "2018/05",
     content: "「TIME OF TIME」专题展",
     enContent: "「 time of time 」 exhibition"
+  },
+  {
+    time: "2019/03",
+    content: "「FUTURE MATERIAL」新材料展",
+    enContent: "「 future material 」 exhibition"
   },
   {
     time: "2019/03",
