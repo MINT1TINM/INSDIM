@@ -1,35 +1,35 @@
 const chiefDesigner = [
   {
-    time: "1996/12/26",
+    time: "1996/12",
     content: "出生于上海",
     enContent: "born in shanghai"
   },
   {},
   {},
   {
-    time: "2014/08/12",
+    time: "2014/08",
     content: "成立INSLENS (INSDIM曾用名)",
     enContent: "found INSLENS"
   },
   {
-    time: "2017/02/14",
+    time: "2017/02",
     content: "发布自有品牌HUMASIM",
     enContent: "introducing individual brand HUMASIM"
   },
   {
-    time: "2018/11/20",
+    time: "2018/11",
     content: "发布新名称INSDIM",
     enContent: "introducing INSDIM (originally named INSLENS)"
   },
   {
-    time: "2019/02/04",
+    time: "2019/02",
     content: "成立DIMLAB数据分析实验室",
     enContent: "found DIMLAB - a data analysis laboratory"
   },
   {},
   {},
   {
-    time: "2019/04/20",
+    time: "2019/04",
     content: "获得「上海市优秀毕业作品」",
     enContent: "best diploma awards of shanghai"
   }
@@ -37,22 +37,22 @@ const chiefDesigner = [
 
 const awards = [
   {
-    time: "2018/02/15",
+    time: "2018/02",
     content: "GREENWOOD入围「红点设计奖」",
     enContent: "greenwood - reddot design award - nominated"
   },
   {
-    time: "2019/05/14",
+    time: "2019/05",
     content: "BLOOM获得「汇创青春」一等奖 (TOP 15)",
     enContent: "bloom - think youth - first prize (top 15)"
   },
   {
-    time: "2019/05/14",
+    time: "2019/05",
     content: "WAISTLINE获得「汇创青春」一等奖",
     enContent: "waistline - think youth - first prize"
   },
   {
-    time: "2019/05/14",
+    time: "2019/05",
     content: "DRAWER获得「汇创青春」三等奖",
     enContent: "drawer - think youth - third prize"
   }
