@@ -23,7 +23,7 @@ router.get("/", async (req, res) => {
       { visibility: true },
       "title author type collaborator titlePic createTime intro introEn",
       {
-        sort: [{ _id: -1 }]
+        sort: [{ createTime: -1 }]
       }
     );
 
