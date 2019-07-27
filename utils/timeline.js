@@ -61,8 +61,8 @@ const awards = [
 const exhibition = [
   {
     time: "2016/12",
-    content: "「ABOUT SET」坐具专题展",
-    enContent: "「 about set 」 exhibition"
+    content: "「ABOUT SIT」坐具专题展",
+    enContent: "「 about sit 」 exhibition"
   },
   {
     time: "2017/06",
