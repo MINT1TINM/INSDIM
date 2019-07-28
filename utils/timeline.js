@@ -13,8 +13,8 @@ const chiefDesigner = [
   },
   {
     time: "2017/02",
-    content: "发布自有品牌HUMASIM",
-    enContent: "introducing individual brand HUMASIM"
+    content: "发布自营品牌HUMASIM",
+    enContent: "introducing proprietary brand HUMASIM"
   },
   {
     time: "2018/11",
@@ -30,7 +30,7 @@ const chiefDesigner = [
   {},
   {
     time: "2019/04",
-    content: "获得「上海市优秀毕业作品」",
+    content: "获评「上海市优秀毕业作品」",
     enContent: "best diploma awards of shanghai"
   }
 ];
@@ -48,8 +48,8 @@ const awards = [
   },
   {
     time: "2019/05",
-    content: "WAISTLINE获得「汇创青春」一等奖",
-    enContent: "waistline - think youth - first prize"
+    content: "RACHIS获得「汇创青春」一等奖",
+    enContent: "rachis - think youth - first prize"
   },
   {
     time: "2019/05",
@@ -61,33 +61,33 @@ const awards = [
 const exhibition = [
   {
     time: "2016/12",
-    content: "「ABOUT SIT」坐具专题展",
-    enContent: "「 about sit 」 exhibition"
+    content: "「ABOUT SIT」",
+    enContent: "「 about sit 」"
   },
   {
     time: "2017/06",
-    content: "「ANILAMP COLLECTION」灯具专题展",
-    enContent: "「 anilamp collection 」 exhibition"
+    content: "「ANILAMP COLLECTION」",
+    enContent: "「 anilamp collection 」"
   },
   {
     time: "2018/05",
-    content: "「TIME OF TIME」专题展",
-    enContent: "「 time of time 」 exhibition"
+    content: "「TIME OF TIME」",
+    enContent: "「 time of time 」"
   },
   {
     time: "2019/03",
-    content: "「FUTURE MATERIAL」新材料展",
-    enContent: "「 future material 」 exhibition"
+    content: "「FUTURE MATERIAL」",
+    enContent: "「 future material 」"
   },
   {
     time: "2019/03",
-    content: "「ANOTHER VERSION」作品展",
-    enContent: "「 another version 」 exhibition"
+    content: "「ANOTHER VERSION」",
+    enContent: "「 another version 」"
   },
   {
     time: "2019/05",
-    content: "「汇创青春」优秀作品展",
-    enContent: "「 think youth  best of 2019」 exhibition"
+    content: "「汇创青春」",
+    enContent: "「 think youth  best of 2019」"
   }
 ];
 
