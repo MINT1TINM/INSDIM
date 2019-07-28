@@ -8,7 +8,7 @@ const chiefDesigner = [
   {},
   {
     time: "2014/08",
-    content: "成立INSLENS (INSDIM曾用名)",
+    content: "成立INSLENS",
     enContent: "found INSLENS"
   },
   {
@@ -18,7 +18,7 @@ const chiefDesigner = [
   },
   {
     time: "2018/11",
-    content: "发布新名称INSDIM",
+    content: "INSLENS更名为INSDIM",
     enContent: "introducing INSDIM (originally named INSLENS)"
   },
   {
@@ -86,7 +86,7 @@ const exhibition = [
   },
   {
     time: "2019/05",
-    content: "「汇创青春」",
+    content: "「汇创青春2019优秀作品展」",
     enContent: "「 think youth  best of 2019」"
   }
 ];
