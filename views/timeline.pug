@@ -3,9 +3,8 @@ extends layout
 block content
   section
     h1 #{__("timeline")}
+    img(src="/img/timeline.jpg" style="max-width:250px" class="mt-30")
     div(class="grid-wrapper-timeline") 
-      div(class="grid-item show-mob")   
-        img(src="/img/timeline.jpg")
       div(class="grid-item timeline-item-container")
         h2 #{__("chiefDesigner")} - LIN
         each item in chiefDesigner 
@@ -38,4 +37,4 @@ block content
               else 
                 p #{item.content}      
       div(class="grid-item hide-mob")   
-        img(src="/img/timeline.jpg" style="max-width:250px")
+        
