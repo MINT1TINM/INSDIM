@@ -11,12 +11,6 @@ body {
   height: 100%;
   margin: 0;
   -webkit-font-smoothing: antialiased;
-  -moz-user-select: none;
-  -o-user-select: none;
-  -khtml-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
 }
 
 .menu {
