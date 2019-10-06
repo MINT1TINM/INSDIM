@@ -9,6 +9,7 @@
   }
   .sidebar {
     background: rgb(36, 36, 36);
+    backdrop-filter: saturate(180%) blur(20px);
   }
   .sidebar a {
     color: #fff;

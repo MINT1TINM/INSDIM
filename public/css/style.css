@@ -188,6 +188,7 @@ ul {
   top: 0;
   left: 0;
   background-color: rgb(255, 255, 255);
+  backdrop-filter: saturate(180%) blur(20px);
   overflow-x: hidden;
   padding: 20px 0;
   transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
